@@ -851,12 +851,12 @@ body {
     line-height: 1.6;
 }
 
-/* 4-GRID FULL WEDDING & VIP PARTY GALLERY */
-.gallery-grid-4 {
+/* 5-GRID FULL WEDDING & VIP PARTY GALLERY */
+.gallery-grid-4, .gallery-grid-5 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 .gallery-card {
@@ -1588,6 +1588,7 @@ footer {
 <div class="top-ticker">
     <div class="ticker-track">
         🚨 EXCLUSIVE TRACK: "Abba Meri Shaadi Karao — Naseem Bhai Superhit Valima Anthem" 🎵 &nbsp; • &nbsp;
+        🏖️ MALDIVES HONEYMOON: Sun, Sea, Sand & Love — "Work Hard, Travel More!" 🍹🌴 &nbsp; • &nbsp;
         🎉 VIP AFTER-PARTY: Same Guy More Happiness! 🍾 &nbsp; • &nbsp;
         ✨ "ALHAMDULILLAH TWO HEARTS ONE FAMILY" SPECIAL EDITION &nbsp; • &nbsp;
         💸 SHAGUN KA LIFAFA STRICTLY MANDATORY &nbsp; • &nbsp;
@@ -1713,10 +1714,13 @@ footer {
             </div>
         </div>
 
-        <!-- QUICK THUMBNAIL SWITCHER -->
+        <!-- QUICK THUMBNAIL SWITCHER (ALL 5 CHAPTERS) -->
         <div class="hero-thumb-switcher">
             <button class="thumb-btn active" onclick="switchBanner('images/wedding_2.jpg', 'Two Hearts, One Family ❤️', 'Nikah Mubarak • Designer Sherwani', this)" title="Two Hearts One Family">
                 <img src="images/wedding_2.jpg" alt="Nikah Two Hearts">
+            </button>
+            <button class="thumb-btn" onclick="switchBanner('images/honeymoon_beach.jpg', 'Sun, Sea & Double Love 🏖️🍹', 'Maldives Sunset Honeymoon • Work Hard, Travel More', this)" title="Beach Honeymoon">
+                <img src="images/honeymoon_beach.jpg" alt="Honeymoon Beach Vacation">
             </button>
             <button class="thumb-btn" onclick="switchBanner('images/vip_party.jpg', 'VIP Lounge Night 🍾', 'Life Is Better Together • Velvet Blazer Swag', this)" title="VIP Night">
                 <img src="images/vip_party.jpg" alt="VIP Party">
@@ -1914,17 +1918,17 @@ footer {
 </section>
 
 
-<!-- SECTION: 4-PHOTO GRAND GALLERY -->
+<!-- SECTION: 5-PHOTO GRAND GALLERY -->
 <section class="section" id="wedding-story" style="background: rgba(18, 12, 25, 0.75);">
     <div class="section-header">
-        <span class="section-kicker">THE COMPLETE 4-CHAPTER JOURNEY</span>
-        <h2 class="section-title">Nikah Se <span>VIP After-Party Tak</span> 📸🍾</h2>
+        <span class="section-kicker">THE COMPLETE 5-CHAPTER JOURNEY</span>
+        <h2 class="section-title">Nikah Se <span>Maldives & VIP Nights Tak</span> 📸🍹</h2>
         <p class="section-sub">
-            From the sacred Nikah stage to high-energy VIP lounge celebrations: Naseem bhai's complete album!
+            From the sacred Nikah stage to VIP parties and sunset beach resort: Naseem bhai's complete luxury album!
         </p>
     </div>
 
-    <div class="gallery-grid-4" id="gallery">
+    <div class="gallery-grid-5" id="gallery">
         <!-- 1. NIKAH SQUAD -->
         <div class="gallery-card">
             <div class="gallery-img-box">
@@ -1982,11 +1986,30 @@ footer {
             </div>
         </div>
 
-        <!-- 4. FAMILY FIRST ALWAYS -->
+        <!-- 4. SUN, SEA & HONEYMOON RESORT -->
+        <div class="gallery-card vip-border">
+            <div class="gallery-img-box">
+                <img src="images/honeymoon_beach.jpg" alt="Sun Sea Sand Love Naseem Beach Honeymoon">
+                <span class="gallery-badge" style="background:linear-gradient(135deg, #b88226, #dfa744); border-color:#ffd700; color:#120e16;">Chapter 4: Sun, Sea & Honeymoon 🏖️🍹</span>
+            </div>
+            <div class="gallery-body">
+                <div>
+                    <h3 class="gallery-title" style="color:#ffd700;">Sun • Sea • Sand • Naseem 🌴</h3>
+                    <p class="gallery-desc">
+                        Maldives sunset beach resort, exotic cocktails, tropical flowers & cool shades! Naseem's golden life rule: <b>"Work Hard • Travel More!"</b> ☀️🌊
+                    </p>
+                </div>
+                <div class="quote-box" style="border-left-color: #ffd700; color:#fff0b3;">
+                    💬 "Good Vibes, Better Together! Interior designing break pe hai, Naseem bhai on beach mode!" 🥥
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. FAMILY FIRST ALWAYS -->
         <div class="gallery-card vip-border">
             <div class="gallery-img-box">
                 <img src="images/family_party.jpg" alt="Family First Always">
-                <span class="gallery-badge" style="background:#1a1222; border-color:var(--gold);">Chapter 4: Same Guy, More Happiness ❤️</span>
+                <span class="gallery-badge" style="background:#1a1222; border-color:var(--gold);">Chapter 5: Same Guy, More Happiness ❤️</span>
             </div>
             <div class="gallery-body">
                 <div>
@@ -2294,10 +2317,11 @@ const funnyMessages = [
     { sender: "Chintu (Mohalla Friend)", avatar: "👦", msg: "Naseem bhai, sofa baad me lagana, pehle 2 plate biryani bhej do! 😂" },
     { sender: "Dulhan #1 💄", avatar: "👰", msg: "Suno ji, modular kitchen me matching lipstick drawer compulsory hai!" },
     { sender: "Dulhan #2 ✨", avatar: "👰", msg: "Aur master bedroom me Italian chandelier sirf meri pasand ka lagega!" },
+    { sender: "Travel Agent Bunty ✈️", avatar: "🏖️", msg: "Naseem bhai, Maldives sunset view cabana me 2 extra coconut water bhej diye hain! 🥥🍹" },
     { sender: "Carpenter Aslam", avatar: "🔨", msg: "Ustaad ji, dulhan ka VIP dressing table ready hai! Salami kitni doge?" },
     { sender: "Abba Jaan ❤️", avatar: "👴", msg: "Naseem! Aakhir dua qabool hui! Ab chillao mat Abba meri shaadi karao! 😂" },
-    { sender: "Sharma Ji (Client)", avatar: "🧐", msg: "Living room ka false ceiling to theek hai, par shaadi me card kyu nahi bheja?" },
-    { sender: "Faizan (Bestie)", avatar: "🤵", msg: "Bhai teri sherwani dekh ke lag raha hai NASA ka model dulha ban gaya!" },
+    { sender: "Sharma Ji (Client)", avatar: "🧐", msg: "Sun & Beach resort to theek hai, par living room ka false ceiling kab banaoge?" },
+    { sender: "Faizan (Bestie)", avatar: "🤵", msg: "Bhai beach pe bhi 'Work Hard Travel More' ka sign board lagwa diya! Legend! 😂" },
     { sender: "Biryani Master Pappu", avatar: "🍛", msg: "50 Deg Biryani ready hai Naseem bhai, doston ko stage se uthao!" }
 ];
 
@@ -2382,6 +2406,17 @@ function updatePlayerUI(playing) {
     }
 }
 
+function enterCelebration(e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const gate = document.getElementById('shaadiWelcomeGate');
+    if (gate) {
+        gate.classList.add('hidden');
+        setTimeout(() => { if (gate) gate.remove(); }, 600);
+    }
+    playSong();
+    blastConfetti();
+}
+
 function playSong() {
     if (!bgSong) return;
     userExplicitlyPaused = false;
@@ -2390,15 +2425,20 @@ function playSong() {
     if (promise !== undefined) {
         promise.then(() => {
             updatePlayerUI(true);
-            removeAutoplayListeners();
+            const gate = document.getElementById('shaadiWelcomeGate');
+            if (gate) {
+                gate.classList.add('hidden');
+                setTimeout(() => { if (gate) gate.remove(); }, 600);
+            }
         }).catch(err => {
-            console.log("Autoplay waiting for user gesture:", err);
+            console.log("Browser waiting for user tap/click to play:", err);
             updatePlayerUI(false);
         });
     }
 }
 
-function pauseSong() {
+function pauseSong(e) {
+    if (e && e.stopPropagation) e.stopPropagation();
     if (!bgSong) return;
     userExplicitlyPaused = true;
     bgSong.pause();
@@ -2426,25 +2466,15 @@ function autoPlayHandler() {
 }
 
 const userInteractionEvents = ['click', 'touchstart', 'touchend', 'pointerdown', 'mousedown', 'scroll', 'keydown', 'wheel'];
-
-function addAutoplayListeners() {
-    userInteractionEvents.forEach(evt => {
-        window.addEventListener(evt, autoPlayHandler, { passive: true });
-    });
-}
-
-function removeAutoplayListeners() {
-    userInteractionEvents.forEach(evt => {
-        window.removeEventListener(evt, autoPlayHandler);
-    });
-}
+userInteractionEvents.forEach(evt => {
+    window.addEventListener(evt, autoPlayHandler, { passive: true });
+});
 
 // Lifecycle autoplay attempts
 playSong();
 window.addEventListener('DOMContentLoaded', () => { if (!userExplicitlyPaused) playSong(); });
 window.addEventListener('load', () => { if (!userExplicitlyPaused) playSong(); });
 window.addEventListener('pageshow', () => { if (!userExplicitlyPaused) playSong(); });
-addAutoplayListeners();
 
 // SPACEBAR SHORTCUT FOR PLAY / PAUSE (unless typing in input)
 window.addEventListener('keydown', (e) => {
