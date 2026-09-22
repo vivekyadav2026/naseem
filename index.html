@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NASEEM INTERIORS — Luxury Beyond Imagination 😂</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:#f7f5f0;
+    color:#191919;
+    overflow-x:hidden;
+}
+
+:root{
+    --dark:#151515;
+    --gold:#c89b5b;
+    --cream:#f7f5f0;
+    --white:#fff;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.4s;
+}
+
+.navbar.scrolled{
+    background:rgba(20,20,20,.92);
+    backdrop-filter:blur(15px);
+    padding:14px 6%;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-btn{
+    padding:12px 20px;
+    border:1px solid var(--gold);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:13px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:130px 7% 80px;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+}
+
+.hero-content{
+    max-width:720px;
+    color:white;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(200,155,91,.18);
+    border:1px solid rgba(200,155,91,.7);
+    padding:10px 18px;
+    border-radius:30px;
+    margin-bottom:25px;
+    font-size:13px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(48px,7vw,88px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    font-size:18px;
+    color:#ddd;
+    max-width:600px;
+    line-height:1.7;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 27px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+/* floating emoji */
+
+.floating-emoji{
+    position:absolute;
+    right:8%;
+    bottom:18%;
+    font-size:70px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0) rotate(-5deg);}
+    50%{transform:translateY(-20px) rotate(5deg);}
+}
+
+/* ================= MARQUEE ================= */
+
+.marquee{
+    background:var(--gold);
+    color:white;
+    padding:13px 0;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.marquee-track{
+    display:inline-block;
+    animation:marquee 18s linear infinite;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+@keyframes marquee{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:100px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title small{
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-family:'Playfair Display',serif;
+    font-size:50px;
+    margin-top:10px;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#191919;
+    color:white;
+}
+
+.stat{
+    text-align:center;
+    padding:45px 20px;
+    border-right:1px solid #333;
+}
+
+.stat h3{
+    color:var(--gold);
+    font-size:42px;
+}
+
+.stat p{
+    color:#bbb;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-img{
+    height:550px;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+}
+
+.about-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.about-sticker{
+    position:absolute;
+    bottom:25px;
+    right:25px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    font-size:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.about h2{
+    font-family:'Playfair Display',serif;
+    font-size:50px;
+    margin:15px 0;
+}
+
+.about p{
+    line-height:1.8;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.fun-box{
+    background:#fff;
+    padding:20px;
+    border-left:4px solid var(--gold);
+    margin-top:25px;
+    font-weight:600;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#efede7;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.card-icon{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#777;
+    line-height:1.6;
+}
+
+.card .tag{
+    display:inline-block;
+    margin-top:20px;
+    padding:6px 12px;
+    border-radius:20px;
+    background:#f3eadc;
+    color:#8d6936;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.portfolio-item{
+    height:350px;
+    overflow:hidden;
+    border-radius:12px;
+    position:relative;
+}
+
+.portfolio-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.portfolio-item:hover img{
+    transform:scale(1.1);
+}
+
+.portfolio-caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:25px;
+    color:white;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+
+.portfolio-caption h3{
+    font-family:'Playfair Display',serif;
+}
+
+/* ================= PRICING ================= */
+
+.pricing{
+    background:#191919;
+    color:white;
+}
+
+.pricing .section-title h2{
+    color:white;
+}
+
+.price-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.price-card{
+    background:#242424;
+    border:1px solid #3b3b3b;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.price-card.featured{
+    border:2px solid var(--gold);
+    transform:scale(1.04);
+}
+
+.price-card h3{
+    color:#ddd;
+}
+
+.price{
+    font-size:45px;
+    color:var(--gold);
+    font-weight:800;
+    margin:20px 0;
+}
+
+.price-card ul{
+    list-style:none;
+    line-height:2.3;
+    color:#bbb;
+}
+
+/* ================= TESTIMONIAL ================= */
+
+.testimonial{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.quote{
+    font-family:'Playfair Display',serif;
+    font-size:35px;
+    line-height:1.5;
+}
+
+.client{
+    margin-top:25px;
+    color:#777;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:
+    linear-gradient(rgba(20,20,20,.85),rgba(20,20,20,.85)),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-family:'Playfair Display',serif;
+    font-size:60px;
+}
+
+.cta p{
+    color:#ccc;
+    margin:20px 0 30px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111;
+    color:white;
+    padding:60px 7% 30px;
+    text-align:center;
+}
+
+footer .logo{
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#777;
+    margin:10px 0;
+}
+
+/* ================= POPUP ================= */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:5000;
+}
+
+.popup-box{
+    background:white;
+    width:min(500px,90%);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    position:relative;
+    animation:popup .5s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.5) rotate(-5deg);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.popup-box .big{
+    font-size:70px;
+}
+
+.popup-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:32px;
+    margin:15px 0;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding:120px 6% 70px;
+    }
+
+    .floating-emoji{
+        right:5%;
+        bottom:10%;
+        font-size:45px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .about-img{
+        height:400px;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .price-grid{
+        grid-template-columns:1fr;
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+
+    .section-title h2{
+        font-size:40px;
+    }
+
+    .cta h2{
+        font-size:42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar" id="navbar">
+
+    <div class="logo">
+        NASEEM<span>.</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-btn">Let's Talk 👋</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✨ India's Most Unnecessarily Premium Interior Designer
+        </div>
+
+        <h1>
+            Your Space.<br>
+            <span>Naseem's Rules.</span> 😎
+        </h1>
+
+        <p>
+            We don't just design interiors.
+            We transform normal houses into places where
+            guests immediately ask — <b>"Bhai kitna laga?"</b> 😂
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#contact" class="btn btn-primary">
+                Start My Transformation ✨
+            </a>
+
+            <a href="#portfolio" class="btn btn-outline">
+                See Our Work 👀
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="floating-emoji">
+        🛋️
+    </div>
+
+</header>
+
+
+<!-- MARQUEE -->
+
+<div class="marquee">
+
+    <div class="marquee-track">
+
+        ✨ NASEEM INTERIORS &nbsp; • &nbsp;
+        LUXURY &nbsp; • &nbsp;
+        DESIGN &nbsp; • &nbsp;
+        EMOTIONAL DAMAGE TO YOUR WALLET 💸 &nbsp; • &nbsp;
+        NASEEM INTERIORS &nbsp; • &nbsp;
+        LUXURY &nbsp; • &nbsp;
+        DESIGN &nbsp; • &nbsp;
+        EMOTIONAL DAMAGE TO YOUR WALLET 💸 &nbsp; • &nbsp;
+
+    </div>
+
+</div>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h3>127+</h3>
+        <p>Projects*</p>
+    </div>
+
+    <div class="stat">
+        <h3>126</h3>
+        <p>Happy Clients*</p>
+    </div>
+
+    <div class="stat">
+        <h3>99%</h3>
+        <p>Client Confusion</p>
+    </div>
+
+    <div class="stat">
+        <h3>₹∞</h3>
+        <p>Design Budget</p>
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="about-img">
+
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85">
+
+            <div class="about-sticker">
+                👨‍🎨
+            </div>
+
+        </div>
+
+        <div>
+
+            <small style="color:#c89b5b;font-weight:700;letter-spacing:3px;">
+                MEET THE LEGEND
+            </small>
+
+            <h2>
+                Meet Naseem.
+            </h2>
+
+            <p>
+                Naseem is not just an interior designer.
+                He is a man who looks at an empty wall and says,
+                <b>"Yahan kuch toh lagana padega."</b>
+            </p>
+
+            <p>
+                His mission is simple:
+                Make every home look expensive,
+                whether the owner can afford it or not. 😂
+            </p>
+
+            <div class="fun-box">
+                💡 Naseem's Design Philosophy:
+                <br><br>
+                "Agar room mein ek empty corner hai,
+                toh budget abhi baaki hai."
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <small>WHAT WE DO</small>
+
+        <h2>Our Premium Services 🏠</h2>
+
+    </div>
+
+    <div class="service-grid">
+
+        <div class="card">
+            <div class="card-icon">🛋️</div>
+            <h3>Luxury Living Room</h3>
+            <p>
+                Normal sofa ko premium bana dena.
+                Guests ko impress karna compulsory.
+            </p>
+            <span class="tag">VERY EXPENSIVE</span>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🛏️</div>
+            <h3>Royal Bedroom</h3>
+            <p>
+                Sone ke liye room nahi,
+                Maharaja-level experience.
+            </p>
+            <span class="tag">SLEEP LIKE KING 👑</span>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🍳</div>
+            <h3>Modular Kitchen</h3>
+            <p>
+                Maggi banegi ₹10 ki,
+                kitchen dikhega ₹10 lakh ka.
+            </p>
+            <span class="tag">MAGGI APPROVED</span>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💡</div>
+            <h3>False Ceiling</h3>
+            <p>
+                Ceiling simple hai?
+                Naseem ke liye unacceptable.
+            </p>
+            <span class="tag">MORE LIGHTS ✨</span>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Wall Makeover</h3>
+            <p>
+                Khali wall ko aisa makeover
+                kiya jayega ki wall khud proud feel kare.
+            </p>
+            <span class="tag">WALL GLOW-UP</span>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏡</div>
+            <h3>Complete Home</h3>
+            <p>
+                Ghar wahi rahega.
+                Lekin neighbours jealous ho jayenge.
+            </p>
+            <span class="tag">FULL DAMAGE 😂</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+    <div class="section-title">
+
+        <small>OUR MASTERPIECES</small>
+
+        <h2>Designed By Naseem 👨‍🎨</h2>
+
+    </div>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85">
+
+            <div class="portfolio-caption">
+                <h3>Project: Paisa Khatam 💸</h3>
+                <p>Luxury Residence</p>
+            </div>
+
+        </div>
+
+        <div class="portfolio-item">
+
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85">
+
+            <div class="portfolio-caption">
+                <h3>Project: EMI Palace 😂</h3>
+                <p>Premium Interior</p>
+            </div>
+
+        </div>
+
+        <div class="portfolio-item">
+
+            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1000&q=85">
+
+            <div class="portfolio-caption">
+                <h3>Project: Bas Ab Aur Nahi</h3>
+                <p>Luxury Apartment</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section class="pricing" id="pricing">
+
+    <div class="section-title">
+
+        <small>INVESTMENT</small>
+
+        <h2>Choose Your Financial Damage 💸</h2>
+
+    </div>
+
+    <div class="price-grid">
+
+        <div class="price-card">
+
+            <h3>STARTER</h3>
+
+            <div class="price">
+                ₹99,999
+            </div>
+
+            <ul>
+                <li>✔️ Basic Design</li>
+                <li>✔️ 1 Consultation</li>
+                <li>✔️ 3 Revisions</li>
+                <li>❌ Mental Peace</li>
+            </ul>
+
+        </div>
+
+
+        <div class="price-card featured">
+
+            <h3>PREMIUM 👑</h3>
+
+            <div class="price">
+                ₹4,99,999
+            </div>
+
+            <ul>
+                <li>✔️ Luxury Design</li>
+                <li>✔️ Unlimited Ideas</li>
+                <li>✔️ Premium Materials</li>
+                <li>✔️ Neighbours Jealous</li>
+            </ul>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>NASEEM ROYAL</h3>
+
+            <div class="price">
+                ₹9,99,999+
+            </div>
+
+            <ul>
+                <li>✔️ Royal Treatment</li>
+                <li>✔️ VIP Consultation</li>
+                <li>✔️ Maximum Luxury</li>
+                <li>✔️ Budget? What's That?</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TESTIMONIAL -->
+
+<section>
+
+    <div class="testimonial">
+
+        <div style="font-size:55px;">😂</div>
+
+        <div class="quote">
+            "Naseem ne mera ghar itna beautiful bana diya
+            ki ab relatives bina bataye aane lage."
+        </div>
+
+        <div class="client">
+            — Imaginary Client, Delhi
+        </div>
+
+        <br><br>
+
+        <div style="color:#c89b5b;">
+            ★ ★ ★ ★ ★
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+    <h2>
+        Ready to Spend? 💸
+    </h2>
+
+    <p>
+        Your dream home is just one questionable financial decision away.
+    </p>
+
+    <a href="#" class="btn btn-primary" onclick="openPrank(event)">
+        Contact Naseem 😂
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        NASEEM<span>.</span>
+    </div>
+
+    <p>
+        Interior Design • Luxury • Creativity • Financial Damage
+    </p>
+
+    <p>
+        © 2026 Naseem Interiors. All Rights Reserved.
+    </p>
+
+    <p style="font-size:12px;">
+        *Some statistics, testimonials and promises may have been
+        professionally exaggerated. 😂
+    </p>
+
+</footer>
+
+
+<!-- PRANK POPUP -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-box">
+
+        <div class="close" onclick="closePrank()">✕</div>
+
+        <div class="big">
+            🤣
+        </div>
+
+        <h2>
+            OYE NASEEM!
+        </h2>
+
+        <p>
+            Agar tu ye website dekh raha hai...
+            <br><br>
+            <b>TOH PRANK HO GAYA BHAI! 😂😂😂</b>
+        </p>
+
+        <br>
+
+        <button
+            class="btn btn-primary"
+            onclick="closePrank()">
+            Theek Hai Bhai 😭
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* Navbar */
+
+window.addEventListener("scroll",function(){
+
+    const navbar=document.getElementById("navbar");
+
+    if(window.scrollY>50){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+
+/* Popup */
+
+function openPrank(e){
+
+    e.preventDefault();
+
+    document.getElementById("popup").style.display="flex";
+
+}
+
+function closePrank(){
+
+    document.getElementById("popup").style.display="none";
+
+}
+
+
+/* Random funny emoji */
+
+const emojis=[
+    "😂",
+    "💸",
+    "🏠",
+    "🛋️",
+    "👨‍🎨",
+    "🔥",
+    "😎",
+    "🤌"
+];
+
+setInterval(()=>{
+
+    const emoji=document.createElement("div");
+
+    emoji.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+    emoji.style.position="fixed";
+    emoji.style.left=Math.random()*100+"%";
+    emoji.style.bottom="-50px";
+    emoji.style.fontSize=(20+Math.random()*30)+"px";
+    emoji.style.zIndex="9999";
+    emoji.style.pointerEvents="none";
+    emoji.style.transition="all 4s linear";
+
+    document.body.appendChild(emoji);
+
+    setTimeout(()=>{
+
+        emoji.style.bottom="110%";
+        emoji.style.transform="rotate(360deg)";
+
+    },100);
+
+    setTimeout(()=>{
+
+        emoji.remove();
+
+    },4200);
+
+},5000);
+
+
+/* Fake loading joke */
+
+setTimeout(()=>{
+
+    console.log(
+        "🚨 NASEEM ALERT: Budget exceeded successfully 😂"
+    );
+
+},2000);
+
+</script>
+
+</body>
+</html>
+```
