@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $timeline = trim($_POST['timeline'] ?? $project['timeline']);
     $short_desc = trim($_POST['short_desc'] ?? $project['short_desc']);
     $full_desc = trim($_POST['full_desc'] ?? $project['full_desc']);
+    $youtube_url = trim($_POST['youtube_url'] ?? ($project['youtube_url'] ?? ''));
     $status = trim($_POST['status'] ?? $project['status']);
     $featured = isset($_POST['featured']) ? 1 : 0;
 
@@ -82,6 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'stage_execution_img' => $stage_execution,
                 'stage_final_img' => $stage_final,
                 'gallery_images' => $galleryImages,
+                'youtube_url' => $youtube_url,
                 'status' => $status,
                 'featured' => $featured,
                 'created_at' => $project['created_at'] ?? date('Y-m-d H:i:s')
@@ -186,9 +188,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <textarea name="full_desc" class="form-control" rows="4"><?= htmlspecialchars($project['full_desc'] ?? '') ?></textarea>
         </div>
 
-        <!-- SECTION 2: PRIMARY MEDIA -->
+        <!-- SECTION 2: PRIMARY MEDIA & VIDEO -->
         <div class="form-section-title">
-            <i data-lucide="image" style="width:18px;height:18px;"></i> 2. Primary Featured Thumbnail Image
+            <i data-lucide="image" style="width:18px;height:18px;"></i> 2. Media, Visuals & YouTube Video Walkthrough
+        </div>
+
+        <div class="form-group" style="margin-bottom:24px;">
+            <label class="form-label" style="display:flex; align-items:center; gap:8px;">
+                <i data-lucide="video" style="width:16px;height:16px;color:var(--gold);"></i> YouTube Video Walkthrough URL (Optional)
+            </label>
+            <input type="url" name="youtube_url" class="form-control" placeholder="e.g. https://www.youtube.com/watch?v=... or https://youtu.be/..." value="<?= htmlspecialchars($project['youtube_url'] ?? '') ?>">
+            <span style="font-size:12px; color:var(--text-dim); margin-top:6px; display:block;">
+                Paste any YouTube video link or Shorts URL. It will automatically render as an embedded video player on the project case study page.
+            </span>
         </div>
 
         <div class="form-group">

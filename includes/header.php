@@ -57,11 +57,15 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="quote.php" class="btn btn-gold btn-sm">
-                        Get a Quote <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                    <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm nav-whatsapp-btn" title="Chat on WhatsApp">
+                        <i data-lucide="message-circle" style="width:16px;height:16px; color:#25D366;"></i>
+                        <span>WhatsApp</span>
                     </a>
-                    <button class="nav-toggle-btn" onclick="toggleMobileNav()">
-                        <i data-lucide="menu" style="width:24px;height:24px;"></i>
+                    <a href="contact.php" class="btn btn-gold btn-sm">
+                        Contact Us <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                    </a>
+                    <button class="nav-toggle-btn" id="navToggleBtn" onclick="toggleMobileNav()" aria-label="Toggle Navigation Menu">
+                        <i data-lucide="menu" id="navToggleIcon" style="width:24px;height:24px;"></i>
                     </button>
                 </div>
             </div>
@@ -69,17 +73,41 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     </nav>
 
     <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav-backdrop" id="mobileDrawerBackdrop" onclick="toggleMobileNav()"></div>
     <div class="mobile-nav-drawer" id="mobileDrawer">
-        <a href="index.php" class="<?= $currentPage === 'index.php' ? 'active' : '' ?>">Home</a>
-        <a href="about.php" class="<?= $currentPage === 'about.php' ? 'active' : '' ?>">About Us</a>
-        <a href="services.php">All Services Overview</a>
-        <a href="interior-design.php">→ Interior Design</a>
-        <a href="exterior-design.php">→ Exterior Design</a>
-        <a href="construction.php">→ Construction</a>
-        <a href="wooden-work.php">→ Wooden Work</a>
-        <a href="turnkey-projects.php">→ Turnkey Projects</a>
-        <a href="projects.php" class="<?= $currentPage === 'projects.php' ? 'active' : '' ?>">Projects Portfolio</a>
-        <a href="process.php" class="<?= $currentPage === 'process.php' ? 'active' : '' ?>">Our 5-Step Process</a>
-        <a href="contact.php" class="<?= $currentPage === 'contact.php' ? 'active' : '' ?>">Contact Us</a>
-        <a href="quote.php" style="background:var(--gold); color:#0F141C;">Get Instant Quote</a>
+        <div class="mobile-drawer-header">
+            <div class="brand-logo">
+                <div class="logo-symbol" style="width:34px;height:34px;font-size:16px;">M</div>
+                <div class="brand-text">
+                    <h2 style="font-size:15px; color:#FFFFFF;">MUSKAN</h2>
+                    <span style="font-size:8.5px;">INTERIORS</span>
+                </div>
+            </div>
+            <button class="mobile-drawer-close" onclick="toggleMobileNav()" aria-label="Close Menu">
+                <i data-lucide="x" style="width:22px;height:22px;"></i>
+            </button>
+        </div>
+        <div class="mobile-drawer-links">
+            <a href="index.php" class="<?= $currentPage === 'index.php' ? 'active' : '' ?>"><i data-lucide="home" style="width:16px;height:16px;"></i> Home</a>
+            <a href="about.php" class="<?= $currentPage === 'about.php' ? 'active' : '' ?>"><i data-lucide="compass" style="width:16px;height:16px;"></i> About Us</a>
+            <a href="services.php" class="<?= $currentPage === 'services.php' ? 'active' : '' ?>"><i data-lucide="layers" style="width:16px;height:16px;"></i> All Services</a>
+            <div class="mobile-sublinks">
+                <a href="interior-design.php">Interior Design</a>
+                <a href="exterior-design.php">Exterior Design</a>
+                <a href="construction.php">Civil Construction</a>
+                <a href="wooden-work.php">Wooden Work</a>
+                <a href="turnkey-projects.php">Turnkey Projects</a>
+            </div>
+            <a href="projects.php" class="<?= in_array($currentPage, ['projects.php', 'project-detail.php']) ? 'active' : '' ?>"><i data-lucide="image" style="width:16px;height:16px;"></i> Projects Portfolio</a>
+            <a href="process.php" class="<?= $currentPage === 'process.php' ? 'active' : '' ?>"><i data-lucide="git-commit" style="width:16px;height:16px;"></i> Our Process</a>
+            <a href="contact.php" class="<?= $currentPage === 'contact.php' ? 'active' : '' ?>"><i data-lucide="mail" style="width:16px;height:16px;"></i> Contact Us</a>
+        </div>
+        <div class="mobile-drawer-ctas">
+            <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn-mobile-whatsapp">
+                <i data-lucide="message-circle" style="width:18px;height:18px;"></i> Chat on WhatsApp
+            </a>
+            <a href="contact.php" class="btn-mobile-contact">
+                <i data-lucide="phone-call" style="width:18px;height:18px;"></i> Contact Studio
+            </a>
+        </div>
     </div>

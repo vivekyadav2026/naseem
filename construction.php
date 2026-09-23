@@ -23,11 +23,11 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="banner-pill"><i data-lucide="hard-hat"></i> Senior Engineer Supervision</div>
                     </div>
                     <div class="banner-cta-group">
-                        <a href="quote.php" class="btn btn-gold">
-                            <i data-lucide="calculator" style="width:15px;height:15px;"></i> Estimate Civil Cost
+                        <a href="contact.php" class="btn btn-gold">
+                            <i data-lucide="phone" style="width:15px;height:15px;"></i> Contact Studio
                         </a>
-                        <a href="contact.php" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.25);">
-                            <i data-lucide="calendar" style="width:15px;height:15px;"></i> Book Site Inspection
+                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
+                            <i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp Civil Team
                         </a>
                     </div>
                 </div>
@@ -147,7 +147,9 @@ require_once __DIR__ . '/includes/header.php';
             <p class="section-desc" style="color:#94A3B8; margin-bottom:28px;">Our senior civil structural engineer is ready to inspect your site.</p>
             <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
                 <a href="contact.php" class="btn btn-gold">Book Civil Site Audit</a>
-                <a href="quote.php" class="btn btn-outline" style="color:#fff; border-color:#334155;">Calculate Civil Quote</a>
+                <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:#25D366; background:rgba(37,211,102,0.08);">
+                    <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Instant Chat
+                </a>
             </div>
         </div>
     </section>

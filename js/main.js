@@ -71,7 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mobile Nav Toggle
 function toggleMobileNav() {
     const drawer = document.getElementById('mobileDrawer');
+    const backdrop = document.getElementById('mobileDrawerBackdrop');
     if (drawer) {
-        drawer.classList.toggle('open');
+        const isOpen = drawer.classList.toggle('open');
+        if (backdrop) {
+            backdrop.classList.toggle('open', isOpen);
+        }
+        document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 }

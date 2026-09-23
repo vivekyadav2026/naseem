@@ -27,11 +27,11 @@ $designs = $dm->getDesigns();
                         <div class="banner-pill"><i data-lucide="map-pin"></i> Patna & Bihar Locations</div>
                     </div>
                     <div class="banner-cta-group">
-                        <a href="quote.php" class="btn btn-gold">
-                            <i data-lucide="calculator" style="width:15px;height:15px;"></i> Estimate Your Project
+                        <a href="contact.php" class="btn btn-gold">
+                            <i data-lucide="phone" style="width:15px;height:15px;"></i> Contact Studio
                         </a>
-                        <a href="contact.php" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.25);">
-                            <i data-lucide="calendar" style="width:15px;height:15px;"></i> Book Studio Consultation
+                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
+                            <i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp Studio
                         </a>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ $designs = $dm->getDesigns();
                     <a href="projects.php?category=All" class="btn btn-gold btn-sm">View All Disciplines</a>
                 </div>
             <?php else: ?>
-                <div class="projects-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:32px;">
+                <div class="projects-grid">
                     <?php foreach ($projects as $p): ?>
                         <div class="project-card" style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; transition:var(--transition);" onmouseenter="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.08)'" onmouseleave="this.style.transform='none'; this.style.boxShadow='none'">
                             <div style="height:240px; position:relative; overflow:hidden;">
@@ -130,7 +130,7 @@ $designs = $dm->getDesigns();
                         <div class="section-tag gold">3D CAD Concepts & Showcase</div>
                         <h2 class="section-title" style="color:#fff;">Latest 3D Renderings & Concepts</h2>
                     </div>
-                    <a href="quote.php" class="btn btn-gold btn-sm">Request Custom 3D Design</a>
+                    <a href="contact.php" class="btn btn-gold btn-sm">Request Custom 3D Design</a>
                 </div>
 
                 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px;">
@@ -158,7 +158,9 @@ $designs = $dm->getDesigns();
             <p class="section-desc" style="margin-bottom:28px;">Our chief architect will prepare a tailored 3D CAD visualization and itemized BOQ estimate.</p>
             <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
                 <a href="contact.php" class="btn btn-gold">Book Free Site Consultation</a>
-                <a href="quote.php" class="btn btn-outline">Calculate Turnkey Estimate</a>
+                <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:#25D366; background:rgba(37,211,102,0.06);">
+                    <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Instant Chat
+                </a>
             </div>
         </div>
     </section>

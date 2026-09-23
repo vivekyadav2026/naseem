@@ -25,11 +25,11 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="banner-pill"><i data-lucide="key"></i> Step 5: Key Handover</div>
                     </div>
                     <div class="banner-cta-group">
-                        <a href="quote.php" class="btn btn-gold">
-                            <i data-lucide="calculator" style="width:15px;height:15px;"></i> Plan Your Project
+                        <a href="contact.php" class="btn btn-gold">
+                            <i data-lucide="phone" style="width:15px;height:15px;"></i> Contact Studio
                         </a>
-                        <a href="contact.php" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.25);">
-                            <i data-lucide="calendar" style="width:15px;height:15px;"></i> Book Step 1 Audit
+                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
+                            <i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp Process Lead
                         </a>
                     </div>
                 </div>
@@ -73,9 +73,9 @@ require_once __DIR__ . '/includes/header.php';
             </div>
 
             <!-- STEP 1 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:36px; margin-bottom:32px; display:grid; grid-template-columns:80px 1fr 320px; gap:32px; align-items:center;">
-                <div>
-                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold);">01</div>
+            <div class="process-step-card">
+                <div class="process-step-num-wrap">
+                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold); flex-shrink:0;">01</div>
                 </div>
                 <div>
                     <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:600; text-transform:uppercase;">Discovery Phase</span>
@@ -100,9 +100,9 @@ require_once __DIR__ . '/includes/header.php';
             </div>
 
             <!-- STEP 2 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:36px; margin-bottom:32px; display:grid; grid-template-columns:80px 1fr 320px; gap:32px; align-items:center;">
-                <div>
-                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold);">02</div>
+            <div class="process-step-card">
+                <div class="process-step-num-wrap">
+                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold); flex-shrink:0;">02</div>
                 </div>
                 <div>
                     <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:600; text-transform:uppercase;">Design & Architecture</span>
@@ -126,9 +126,9 @@ require_once __DIR__ . '/includes/header.php';
             </div>
 
             <!-- STEP 3 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:36px; margin-bottom:32px; display:grid; grid-template-columns:80px 1fr 320px; gap:32px; align-items:center;">
-                <div>
-                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold);">03</div>
+            <div class="process-step-card">
+                <div class="process-step-num-wrap">
+                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold); flex-shrink:0;">03</div>
                 </div>
                 <div>
                     <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:600; text-transform:uppercase;">Execution Phase</span>
@@ -151,9 +151,9 @@ require_once __DIR__ . '/includes/header.php';
             </div>
 
             <!-- STEP 4 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:36px; margin-bottom:32px; display:grid; grid-template-columns:80px 1fr 320px; gap:32px; align-items:center;">
-                <div>
-                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold);">04</div>
+            <div class="process-step-card">
+                <div class="process-step-num-wrap">
+                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold); flex-shrink:0;">04</div>
                 </div>
                 <div>
                     <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:600; text-transform:uppercase;">Aesthetic Detailing</span>
@@ -176,9 +176,9 @@ require_once __DIR__ . '/includes/header.php';
             </div>
 
             <!-- STEP 5 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:36px; margin-bottom:32px; display:grid; grid-template-columns:80px 1fr 320px; gap:32px; align-items:center;">
-                <div>
-                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold);">05</div>
+            <div class="process-step-card">
+                <div class="process-step-num-wrap">
+                    <div style="width:68px; height:68px; background:#0F141C; color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; border:2px solid var(--gold); flex-shrink:0;">05</div>
                 </div>
                 <div>
                     <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:600; text-transform:uppercase;">Handover & Warranty</span>
@@ -210,7 +210,9 @@ require_once __DIR__ . '/includes/header.php';
             <p class="section-desc" style="color:#94A3B8; margin-bottom:28px;">Schedule your free dimensional site survey today.</p>
             <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
                 <a href="contact.php" class="btn btn-gold">Book Free Site Consultation</a>
-                <a href="quote.php" class="btn btn-outline" style="color:#fff; border-color:#334155;">Calculate Turnkey Quote</a>
+                <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:#25D366; background:rgba(37,211,102,0.08);">
+                    <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Instant Chat
+                </a>
             </div>
         </div>
     </section>

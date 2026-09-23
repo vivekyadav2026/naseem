@@ -12,6 +12,8 @@ define('SITE_NAME', 'Muskan Interiors');
 define('SITE_TAGLINE', 'More Than Interiors. We Build Complete Spaces.');
 define('SITE_PHONE_1', '+91 98765 43210');
 define('SITE_PHONE_2', '+91 91234 56789');
+define('SITE_WHATSAPP', '919876543210');
+define('SITE_WHATSAPP_LINK', 'https://wa.me/919876543210?text=Hello%20Muskan%20Interiors%2C%20I%20would%20like%20to%20enquire%20about%20my%20interior%20%26%20construction%20project.');
 define('SITE_EMAIL', 'contact@muskaninteriors.com');
 define('SITE_ADDRESS', 'Exhibition Road, Near Gandhi Maidan, Patna, Bihar — 800001');
 

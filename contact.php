@@ -63,10 +63,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="banner-pill"><i data-lucide="calendar"></i> Zero Obligation Site Visit</div>
                     </div>
                     <div class="banner-cta-group">
-                        <a href="tel:+919876543210" class="btn btn-gold">
-                            <i data-lucide="phone-call" style="width:15px;height:15px;"></i> Call +91 98765 43210
+                        <a href="tel:<?= SITE_PHONE_1 ?>" class="btn btn-gold">
+                            <i data-lucide="phone-call" style="width:15px;height:15px;"></i> Call <?= SITE_PHONE_1 ?>
                         </a>
-                        <a href="https://wa.me/919876543210" target="_blank" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.25);">
+                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
                             <i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp Architect
                         </a>
                     </div>
@@ -105,11 +105,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <section class="section" style="background:var(--bg);">
         <div class="container">
             
-            <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:48px; align-items:start;">
+            <div class="contact-layout-grid">
                 
                 <!-- CONTACT INFO -->
                 <div>
-                    <div style="background:#0F141C; color:#fff; padding:40px; border-radius:12px; border:1px solid #242D3D;">
+                    <div style="background:#0F141C; color:#fff; padding:36px; border-radius:12px; border:1px solid #242D3D;">
                         <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase;">Direct Studio Desk</span>
                         <h3 style="font-size:24px; margin:10px 0 24px; font-weight:700; color:#fff;">Muskan Interiors Studio</h3>
                         <p style="color:#94A3B8; font-size:14px; margin-bottom:32px; line-height:1.6;">
@@ -158,8 +158,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
 
                         <div style="margin-top:32px; padding-top:20px; border-top:1px solid #242D3D; display:flex; gap:12px;">
-                            <a href="https://wa.me/919876543210?text=Hello%20Muskan%20Interiors,%20I%20want%20to%20consult%20for%20my%20property." target="_blank" class="btn btn-gold btn-sm" style="flex:1; justify-content:center;">
-                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Studio
+                            <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm" style="flex:1; justify-content:center; background:#25D366; border-color:#25D366; color:#fff;">
+                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Studio Desk
                             </a>
                         </div>
                     </div>
@@ -167,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- CONTACT FORM -->
                 <div>
-                    <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:40px; box-shadow:0 10px 30px rgba(0,0,0,0.03);">
+                    <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,0.03);">
                         <div style="margin-bottom:24px;">
                             <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:600; text-transform:uppercase;">Quick Response Guarantee</span>
                             <h3 style="font-size:24px; margin-top:4px; font-weight:700; color:#0F141C;">Book Free Site Consultation</h3>
@@ -189,7 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <?php endif; ?>
 
                         <form method="POST" action="">
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                            <div class="form-grid-row">
                                 <div class="form-group">
                                     <label class="form-label">Full Name *</label>
                                     <input type="text" name="name" class="form-control" placeholder="e.g. Rahul Sharma" required>
@@ -200,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </div>
 
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                            <div class="form-grid-row">
                                 <div class="form-group">
                                     <label class="form-label">Email Address</label>
                                     <input type="email" name="email" class="form-control" placeholder="e.g. rahul@example.com">
@@ -211,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </div>
 
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                            <div class="form-grid-row">
                                 <div class="form-group">
                                     <label class="form-label">Project Type *</label>
                                     <select name="service" class="form-control" required>
@@ -234,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </div>
 
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                            <div class="form-grid-row">
                                 <div class="form-group">
                                     <label class="form-label">Approx. Budget</label>
                                     <select name="budget" class="form-control">

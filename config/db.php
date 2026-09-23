@@ -198,6 +198,7 @@ class DataManager {
                     'stage_execution_img' => 'images/muskan/real_execution.jpg',
                     'stage_final_img' => 'images/muskan/after_luxury.jpg',
                     'gallery_images' => json_encode(['images/muskan/living_room.jpg', 'images/muskan/modular_kitchen.jpg', 'images/muskan/wooden_wardrobe.jpg']),
+                    'youtube_url' => 'https://www.youtube.com/watch?v=7WT1c7Q_tG8',
                     'status' => 'Completed',
                     'featured' => 1,
                     'created_at' => date('Y-m-d H:i:s', strtotime('-10 days'))
@@ -220,6 +221,7 @@ class DataManager {
                     'stage_execution_img' => 'images/muskan/construction_site.jpg',
                     'stage_final_img' => 'images/muskan/living_room.jpg',
                     'gallery_images' => json_encode(['images/muskan/living_room.jpg', 'images/muskan/after_luxury.jpg']),
+                    'youtube_url' => 'https://www.youtube.com/watch?v=7WT1c7Q_tG8',
                     'status' => 'Completed',
                     'featured' => 1,
                     'created_at' => date('Y-m-d H:i:s', strtotime('-20 days'))
@@ -242,6 +244,7 @@ class DataManager {
                     'stage_execution_img' => 'images/muskan/real_execution.jpg',
                     'stage_final_img' => 'images/muskan/modular_kitchen.jpg',
                     'gallery_images' => json_encode(['images/muskan/modular_kitchen.jpg']),
+                    'youtube_url' => 'https://www.youtube.com/watch?v=7WT1c7Q_tG8',
                     'status' => 'Completed',
                     'featured' => 1,
                     'created_at' => date('Y-m-d H:i:s', strtotime('-30 days'))
@@ -264,6 +267,7 @@ class DataManager {
                     'stage_execution_img' => 'images/muskan/construction_site.jpg',
                     'stage_final_img' => 'images/muskan/modern_elevation.jpg',
                     'gallery_images' => json_encode(['images/muskan/modern_elevation.jpg', 'images/muskan/hero_villa.jpg']),
+                    'youtube_url' => 'https://www.youtube.com/watch?v=7WT1c7Q_tG8',
                     'status' => 'Completed',
                     'featured' => 1,
                     'created_at' => date('Y-m-d H:i:s', strtotime('-40 days'))
@@ -286,6 +290,7 @@ class DataManager {
                     'stage_execution_img' => 'images/muskan/real_execution.jpg',
                     'stage_final_img' => 'images/muskan/commercial_office.jpg',
                     'gallery_images' => json_encode(['images/muskan/commercial_office.jpg']),
+                    'youtube_url' => 'https://www.youtube.com/watch?v=7WT1c7Q_tG8',
                     'status' => 'Completed',
                     'featured' => 0,
                     'created_at' => date('Y-m-d H:i:s', strtotime('-50 days'))

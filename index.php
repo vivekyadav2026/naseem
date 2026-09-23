@@ -28,11 +28,14 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
                         Complete Interior, Exterior, Construction & Wooden Work Solutions — Designed Around Your Vision. From raw civil foundations and 3D CAD visualization to bespoke modular woodwork delivered under one roof.
                     </p>
                     <div class="hero-btns">
-                        <a href="quote.php" class="btn btn-gold">
-                            <i data-lucide="sparkles" style="width:18px;height:18px;"></i> Start Your Project
+                        <a href="contact.php" class="btn btn-gold">
+                            <i data-lucide="sparkles" style="width:18px;height:18px;"></i> Contact Studio
                         </a>
-                        <a href="projects.php" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.3);">
-                            <i data-lucide="compass" style="width:18px;height:18px;"></i> View Our Projects
+                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
+                            <i data-lucide="message-circle" style="width:18px;height:18px;"></i> WhatsApp Us
+                        </a>
+                        <a href="projects.php" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.25);">
+                            <i data-lucide="compass" style="width:18px;height:18px;"></i> View Projects
                         </a>
                     </div>
                 </div>
@@ -111,53 +114,93 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
 
             <div class="services-grid">
                 <!-- 1. Interior Design -->
-                <div class="service-card">
-                    <div class="service-icon"><i data-lucide="layout"></i></div>
-                    <h3>Interior Design</h3>
-                    <p>Living rooms, false ceilings, magnetic track lighting, acoustic wall panelling, wallpaper treatments, and bespoke furniture.</p>
-                    <a href="interior-design.php" class="service-link">
-                        Explore 14 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-                    </a>
+                <div class="service-card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+                    <div style="height:180px; position:relative; overflow:hidden;">
+                        <img src="images/muskan/interior_living.jpg" alt="Interior Design" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+                        <div style="position:absolute; top:10px; left:10px; background:rgba(9,13,20,0.85); backdrop-filter:blur(4px); color:var(--gold); padding:3px 10px; border-radius:4px; font-size:11px; font-family:'IBM Plex Mono',monospace; font-weight:700; border:1px solid rgba(197,154,63,0.3);">
+                            14 SUB-SERVICES
+                        </div>
+                    </div>
+                    <div style="padding:24px; display:flex; flex-direction:column; flex:1;">
+                        <div class="service-icon" style="margin-top:-44px; position:relative; z-index:2; box-shadow:0 6px 16px rgba(0,0,0,0.15);"><i data-lucide="layout"></i></div>
+                        <h3 style="margin-top:8px;">Interior Design</h3>
+                        <p style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:14px; flex:1;">Living rooms, false ceilings, magnetic track lighting, acoustic wall panelling, wallpaper treatments, and bespoke furniture.</p>
+                        <a href="interior-design.php" class="service-link" style="margin-top:auto;">
+                            Explore 14 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 2. Exterior Design -->
-                <div class="service-card">
-                    <div class="service-icon"><i data-lucide="building"></i></div>
-                    <h3>Exterior Design</h3>
-                    <p>3D modern elevations, HPL/WPC louvers, natural stone cladding, boundary gates, and exterior facade floodlighting.</p>
-                    <a href="exterior-design.php" class="service-link">
-                        Explore 11 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-                    </a>
+                <div class="service-card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+                    <div style="height:180px; position:relative; overflow:hidden;">
+                        <img src="images/muskan/exterior_facade.jpg" alt="Exterior Design" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+                        <div style="position:absolute; top:10px; left:10px; background:rgba(9,13,20,0.85); backdrop-filter:blur(4px); color:var(--gold); padding:3px 10px; border-radius:4px; font-size:11px; font-family:'IBM Plex Mono',monospace; font-weight:700; border:1px solid rgba(197,154,63,0.3);">
+                            11 SUB-SERVICES
+                        </div>
+                    </div>
+                    <div style="padding:24px; display:flex; flex-direction:column; flex:1;">
+                        <div class="service-icon" style="margin-top:-44px; position:relative; z-index:2; box-shadow:0 6px 16px rgba(0,0,0,0.15);"><i data-lucide="building"></i></div>
+                        <h3 style="margin-top:8px;">Exterior Design</h3>
+                        <p style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:14px; flex:1;">3D modern elevations, HPL/WPC louvers, natural stone cladding, boundary gates, and exterior facade floodlighting.</p>
+                        <a href="exterior-design.php" class="service-link" style="margin-top:auto;">
+                            Explore 11 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 3. Civil Construction -->
-                <div class="service-card">
-                    <div class="service-icon"><i data-lucide="hammer"></i></div>
-                    <h3>Civil Construction</h3>
-                    <p>RCC foundations, structural beam columns, brickwork, MEP electrical/plumbing conduits, waterproofing, and remodeling.</p>
-                    <a href="construction.php" class="service-link">
-                        Explore 13 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-                    </a>
+                <div class="service-card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+                    <div style="height:180px; position:relative; overflow:hidden;">
+                        <img src="images/muskan/construction_site.jpg" alt="Civil Construction" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+                        <div style="position:absolute; top:10px; left:10px; background:rgba(9,13,20,0.85); backdrop-filter:blur(4px); color:var(--gold); padding:3px 10px; border-radius:4px; font-size:11px; font-family:'IBM Plex Mono',monospace; font-weight:700; border:1px solid rgba(197,154,63,0.3);">
+                            13 SUB-SERVICES
+                        </div>
+                    </div>
+                    <div style="padding:24px; display:flex; flex-direction:column; flex:1;">
+                        <div class="service-icon" style="margin-top:-44px; position:relative; z-index:2; box-shadow:0 6px 16px rgba(0,0,0,0.15);"><i data-lucide="hammer"></i></div>
+                        <h3 style="margin-top:8px;">Civil Construction</h3>
+                        <p style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:14px; flex:1;">RCC foundations, structural beam columns, brickwork, MEP electrical/plumbing conduits, waterproofing, and remodeling.</p>
+                        <a href="construction.php" class="service-link" style="margin-top:auto;">
+                            Explore 13 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 4. Wooden Work -->
-                <div class="service-card">
-                    <div class="service-icon"><i data-lucide="box"></i></div>
-                    <h3>Wooden Work & Modular</h3>
-                    <p>BWP 710 marine ply kitchens, smoked glass walk-in wardrobes, PU polish veneer, TV consoles, and vanity joinery.</p>
-                    <a href="wooden-work.php" class="service-link">
-                        Explore 13 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-                    </a>
+                <div class="service-card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+                    <div style="height:180px; position:relative; overflow:hidden;">
+                        <img src="images/muskan/wooden_wardrobe.jpg" alt="Wooden Work & Modular" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+                        <div style="position:absolute; top:10px; left:10px; background:rgba(9,13,20,0.85); backdrop-filter:blur(4px); color:var(--gold); padding:3px 10px; border-radius:4px; font-size:11px; font-family:'IBM Plex Mono',monospace; font-weight:700; border:1px solid rgba(197,154,63,0.3);">
+                            13 SUB-SERVICES
+                        </div>
+                    </div>
+                    <div style="padding:24px; display:flex; flex-direction:column; flex:1;">
+                        <div class="service-icon" style="margin-top:-44px; position:relative; z-index:2; box-shadow:0 6px 16px rgba(0,0,0,0.15);"><i data-lucide="box"></i></div>
+                        <h3 style="margin-top:8px;">Wooden Work & Modular</h3>
+                        <p style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:14px; flex:1;">BWP 710 marine ply kitchens, smoked glass walk-in wardrobes, PU polish veneer, TV consoles, and vanity joinery.</p>
+                        <a href="wooden-work.php" class="service-link" style="margin-top:auto;">
+                            Explore 13 Sub-Services <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 5. Turnkey Projects -->
-                <div class="service-card" style="border-color:var(--gold); background:#FAF7F0;">
-                    <div class="service-icon" style="background:#0F141C; color:var(--gold);"><i data-lucide="key"></i></div>
-                    <h3>Turnkey Complete Solution</h3>
-                    <p>Single-point contract, dedicated site supervisor, guaranteed 45-60 day handover, and zero hidden price escalations.</p>
-                    <a href="turnkey-projects.php" class="service-link">
-                        Explore Turnkey Scope <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-                    </a>
+                <div class="service-card" style="padding:0; overflow:hidden; display:flex; flex-direction:column; border-color:var(--gold); background:#FAF7F0;">
+                    <div style="height:180px; position:relative; overflow:hidden;">
+                        <img src="images/muskan/hero_villa.jpg" alt="Turnkey Complete Solutions" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+                        <div style="position:absolute; top:10px; left:10px; background:#0F141C; color:var(--gold); padding:3px 10px; border-radius:4px; font-size:11px; font-family:'IBM Plex Mono',monospace; font-weight:700; border:1px solid var(--gold);">
+                            COMPLETE SOLUTION
+                        </div>
+                    </div>
+                    <div style="padding:24px; display:flex; flex-direction:column; flex:1;">
+                        <div class="service-icon" style="margin-top:-44px; position:relative; z-index:2; background:#0F141C; color:var(--gold); box-shadow:0 6px 16px rgba(0,0,0,0.25); border:1px solid var(--gold);"><i data-lucide="key"></i></div>
+                        <h3 style="margin-top:8px;">Turnkey Complete Solution</h3>
+                        <p style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:14px; flex:1;">Single-point contract, dedicated site supervisor, guaranteed 45-60 day handover, and zero hidden price escalations.</p>
+                        <a href="turnkey-projects.php" class="service-link" style="margin-top:auto; color:var(--gold-dark); font-weight:700;">
+                            Explore Turnkey Scope <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,7 +219,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
                 </a>
             </div>
 
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:28px;">
+            <div class="projects-grid">
                 <?php foreach ($featuredProjects as $p): ?>
                     <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; transition:var(--transition);" onmouseenter="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.08)'" onmouseleave="this.style.transform='none'; this.style.boxShadow='none'">
                         <div style="height:230px; position:relative; overflow:hidden;">
@@ -216,7 +259,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
                 <p class="section-desc" style="color:#94A3B8;">We document every stage with photographic transparency from initial brickwork to luxury handover.</p>
             </div>
 
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+            <div class="timeline-grid-4">
                 <!-- Stage 1 -->
                 <div style="background:#171E28; border:1px solid #2A3649; border-radius:10px; overflow:hidden;">
                     <div style="height:170px; overflow:hidden;">
@@ -465,7 +508,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
                 <p class="section-desc">We deliver institutional-grade certainty, uncompromising material quality, and architectural finesse.</p>
             </div>
 
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+            <div class="reasons-grid-8">
                 <div class="service-card" style="padding:28px;">
                     <div class="service-icon"><i data-lucide="layers"></i></div>
                     <h4>Complete End-to-End Solutions</h4>
@@ -518,7 +561,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
                 <h2 class="section-title">What Our Homeowners Say</h2>
             </div>
 
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+            <div class="testimonials-grid">
                 <div class="service-card" style="padding:32px;">
                     <div style="color:var(--gold); font-size:18px; margin-bottom:12px;">★★★★★</div>
                     <p style="font-size:14px; color:#475569; line-height:1.7; margin-bottom:20px;">
@@ -658,8 +701,12 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
                 Schedule your free site measurement and 3D architectural consultation today.
             </p>
             <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-                <a href="contact.php" class="btn btn-gold">Book Free Consultation</a>
-                <a href="quote.php" class="btn btn-outline" style="color:#fff; border-color:#334155;">Calculate Turnkey Quote</a>
+                <a href="contact.php" class="btn btn-gold">
+                    <i data-lucide="calendar" style="width:16px;height:16px;"></i> Book Free Consultation
+                </a>
+                <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:#25D366; background:rgba(37,211,102,0.08);">
+                    <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Instant Chat
+                </a>
             </div>
         </div>
     </section>

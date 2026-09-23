@@ -49,11 +49,11 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
                         <div class="banner-pill"><i data-lucide="check-circle-2"></i> <?= htmlspecialchars($project['status'] ?? 'Completed') ?></div>
                     </div>
                     <div class="banner-cta-group">
-                        <a href="quote.php" class="btn btn-gold">
-                            <i data-lucide="calculator" style="width:15px;height:15px;"></i> Get Similar Space Estimate
+                        <a href="contact.php" class="btn btn-gold">
+                            <i data-lucide="phone" style="width:15px;height:15px;"></i> Contact Studio
                         </a>
-                        <a href="contact.php" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.25);">
-                            <i data-lucide="calendar" style="width:15px;height:15px;"></i> Book Site Consultation
+                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
+                            <i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp Enquiry
                         </a>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
             </div>
 
             <!-- STAGE 1 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:40px; display:grid; grid-template-columns:1fr 1.2fr; gap:36px; align-items:center;">
+            <div class="detail-stage-card">
                 <div style="height:320px; overflow:hidden;">
                     <img src="<?= htmlspecialchars(!empty($project['stage_before_img']) ? $project['stage_before_img'] : 'images/muskan/before_raw.jpg') ?>" alt="Stage 1 Raw Site" style="width:100%; height:100%; object-fit:cover;">
                 </div>
@@ -143,7 +143,7 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
             </div>
 
             <!-- STAGE 2 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:40px; display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center;">
+            <div class="detail-stage-reverse">
                 <div style="padding:32px 0 32px 32px;">
                     <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">STAGE 02</span>
                     <h3 style="font-size:24px; font-weight:700; margin:6px 0 14px; color:#0F141C;">2D Space Layout & 3D Photoreal CAD Render</h3>
@@ -161,7 +161,7 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
             </div>
 
             <!-- STAGE 3 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:40px; display:grid; grid-template-columns:1fr 1.2fr; gap:36px; align-items:center;">
+            <div class="detail-stage-card">
                 <div style="height:320px; overflow:hidden;">
                     <img src="<?= htmlspecialchars(!empty($project['stage_execution_img']) ? $project['stage_execution_img'] : 'images/muskan/real_execution.jpg') ?>" alt="Stage 3 Civil Execution" style="width:100%; height:100%; object-fit:cover;">
                 </div>
@@ -179,7 +179,7 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
             </div>
 
             <!-- STAGE 4 -->
-            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:40px; display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center;">
+            <div class="detail-stage-reverse">
                 <div style="padding:32px 0 32px 32px;">
                     <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold); font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">STAGE 04</span>
                     <h3 style="font-size:24px; font-weight:700; margin:6px 0 14px; color:#0F141C;">Final Luxury Result & 100-Point Quality Audit</h3>
@@ -202,13 +202,34 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
     <!-- FULL SCOPE & GALLERY -->
     <section class="section" style="background:#fff; border-top:1px solid var(--border);">
         <div class="container">
-            <div style="display:grid; grid-template-columns:1.6fr 1fr; gap:48px;">
+            <div class="detail-overview-grid">
                 
                 <div>
                     <h3 style="font-size:22px; font-weight:700; color:#0F141C; margin-bottom:16px;">Architectural Scope & Engineering Overview</h3>
                     <div style="font-size:15px; color:#475569; line-height:1.8; margin-bottom:30px;">
                         <?= nl2br(htmlspecialchars($project['full_desc'])) ?>
                     </div>
+
+                    <?php 
+                    $embedVideo = !empty($project['youtube_url']) ? getYoutubeEmbedUrl($project['youtube_url']) : '';
+                    if (!empty($embedVideo)): 
+                    ?>
+                        <!-- YOUTUBE VIDEO WALKTHROUGH SECTION -->
+                        <div style="margin-bottom:36px;">
+                            <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+                                <div style="width:40px; height:40px; background:var(--gold-soft); color:var(--gold-dark); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                                    <i data-lucide="play" style="width:20px;height:20px;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size:19px; font-weight:700; color:#0F141C; margin:0;">Project Video Walkthrough & Site Tour</h4>
+                                    <span style="font-size:12.5px; color:#64748B;">Watch the high-resolution site execution & final handover walkthrough</span>
+                                </div>
+                            </div>
+                            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:1px solid var(--border); box-shadow:0 10px 30px rgba(0,0,0,0.08); background:#0F141C;">
+                                <iframe src="<?= htmlspecialchars($embedVideo) ?>" title="Project Video Walkthrough" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    <?php endif; ?>
 
                     <?php if (!empty($gallery)): ?>
                         <h4 style="font-size:18px; font-weight:700; color:#0F141C; margin-bottom:16px;">Project Photo Gallery</h4>
