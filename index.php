@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Home — More Than Interiors. We Build Complete Spaces.';
 $pageDesc = 'Muskan Interiors is a premier turnkey architecture and interior design studio in Patna delivering 3D designs, civil construction, modular kitchens, and custom woodwork.';
 require_once __DIR__ . '/includes/header.php';
@@ -10,371 +10,11 @@ if (empty($featuredProjects)) {
 $designs = array_slice($dm->getDesigns(), 0, 4);
 ?>
 
-    <style>
-        /* NEW LUXURY DESIGN SYSTEM OVERRIDES */
-        :root {
-            --lux-dark: #090B0E;
-            --lux-text: #2A3649;
-            --lux-gray: #FAF9F5;
-            --lux-gold: #C59A3F;
-            --font-display: 'Inter', sans-serif;
-            --font-body: 'Inter', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--lux-text);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            font-weight: 300;
-            letter-spacing: -0.02em;
-        }
-
-        /* 1. CINEMATIC HERO */
-        .lux-hero {
-            position: relative;
-            height: 95vh;
-            min-height: 700px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: #000;
-        }
-        .lux-hero-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.85;
-            transition: transform 10s ease-out;
-            animation: zoomOut 20s infinite alternate;
-        }
-        @keyframes zoomOut {
-            0% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .lux-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%);
-        }
-        .lux-hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #fff;
-            max-width: 900px;
-            padding: 0 20px;
-            margin-top: 80px;
-        }
-        .lux-hero-title {
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-        .lux-hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.3rem);
-            font-weight: 300;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-        .lux-btn-group {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .lux-btn {
-            padding: 16px 36px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .lux-btn-primary {
-            background: #fff;
-            color: #000;
-        }
-        .lux-btn-primary:hover {
-            background: var(--lux-gold);
-            color: #fff;
-        }
-        .lux-btn-outline {
-            border: 1px solid rgba(255,255,255,0.4);
-            color: #fff;
-        }
-        .lux-btn-outline:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: #fff;
-        }
-
-        /* 2. SPLIT SECTIONS (IMAGE + CONTENT) */
-        .lux-split {
-            display: flex;
-            flex-wrap: wrap;
-            min-height: 80vh;
-        }
-        .lux-split.reverse {
-            flex-direction: row-reverse;
-        }
-        .lux-split-img {
-            flex: 1 1 50%;
-            min-height: 500px;
-            position: relative;
-        }
-        .lux-split-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .lux-split-content {
-            flex: 1 1 50%;
-            padding: 8vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: #fff;
-        }
-        .lux-split-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--lux-gold);
-            margin-bottom: 24px;
-        }
-        .lux-split-title {
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
-            margin-bottom: 32px;
-            line-height: 1.2;
-            color: var(--lux-dark);
-        }
-        .lux-split-desc {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            max-width: 500px;
-        }
-
-        /* 3. MASONRY EDITORIAL GALLERY */
-        .lux-gallery-section {
-            padding: 120px 0;
-            background: var(--lux-gray);
-        }
-        .lux-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 20px;
-            padding: 0 20px;
-            max-width: 1600px;
-            margin: 0 auto;
-        }
-        .lux-gallery-item {
-            position: relative;
-            overflow: hidden;
-            display: block;
-            border-radius: 4px;
-        }
-        .lux-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        .lux-gallery-item:hover img {
-            transform: scale(1.03);
-        }
-        .lux-gallery-item.large { grid-column: span 8; height: 700px; }
-        .lux-gallery-item.tall { grid-column: span 4; height: 700px; }
-        .lux-gallery-item.wide { grid-column: span 6; height: 400px; }
-
-        .lux-gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.3);
-            display: flex;
-            align-items: flex-end;
-            padding: 40px;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        .lux-gallery-item:hover .lux-gallery-overlay {
-            opacity: 1;
-        }
-        .lux-gallery-overlay h3 {
-            color: #fff;
-            font-size: 24px;
-            margin: 0;
-        }
-
-        /* 4. PROMOTIONAL BANNER */
-        .lux-promo {
-            position: relative;
-            height: 70vh;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .lux-promo-img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .lux-promo-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(9, 11, 14, 0.6);
-        }
-        .lux-promo-content {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-            padding: 0 20px;
-        }
-        .lux-promo-title {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 20px;
-        }
-        
-        /* 5. CATEGORY EXPLORER */
-        .lux-category-section {
-            padding: 120px 0;
-            background: #fff;
-        }
-        .lux-cat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .lux-cat-card {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-        }
-        .lux-cat-img-wrap {
-            position: relative;
-            aspect-ratio: 4/5;
-            overflow: hidden;
-            margin-bottom: 24px;
-        }
-        .lux-cat-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-        .lux-cat-card:hover .lux-cat-img-wrap img {
-            transform: scale(1.05);
-        }
-        .lux-cat-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 15px;
-        }
-
-        /* 6. PROJECT SHOWCASE */
-        .lux-project-section {
-            padding: 120px 0;
-            background: var(--lux-dark);
-            color: #fff;
-        }
-        .lux-project-featured {
-            position: relative;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-        }
-        .lux-project-img-wrapper {
-            width: 85%;
-            margin-left: auto;
-        }
-        .lux-project-img-wrapper img {
-            width: 100%;
-            height: 70vh;
-            object-fit: cover;
-            display: block;
-        }
-        .lux-project-info {
-            background: #fff;
-            color: #000;
-            padding: 60px;
-            max-width: 480px;
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-        }
-
-        @media (max-width: 991px) {
-            .lux-gallery-item.large, .lux-gallery-item.tall, .lux-gallery-item.wide {
-                grid-column: span 12;
-                height: 50vh;
-            }
-            .lux-split-content {
-                padding: 10vw 5vw;
-            }
-            .lux-project-featured {
-                display: block;
-            }
-            .lux-project-img-wrapper {
-                width: 100%;
-                margin: 0;
-            }
-            .lux-project-img-wrapper img {
-                height: 50vh;
-            }
-            .lux-project-info {
-                position: relative;
-                left: 0;
-                top: 0;
-                transform: none;
-                margin-top: -50px;
-                margin-left: 20px;
-                margin-right: 20px;
-                width: calc(100% - 40px);
-                max-width: none;
-                padding: 40px 20px;
-            }
-        }
-    </style>
+    
 
     <!-- 1. CINEMATIC HERO -->
     <header class="lux-hero">
-        <img src="images/muskan/hero_cinematic_interior_1790770500514.jpg" alt="Luxury Living Interior" class="lux-hero-img">
+        <img fetchpriority="high" src="images/muskan/hero_cinematic_interior_1790770500514.jpg" alt="Luxury Living Interior" class="lux-hero-img">
         <div class="lux-hero-overlay"></div>
         <div class="lux-hero-content">
             <h1 class="lux-hero-title">Designed for Your Lifestyle</h1>
@@ -391,7 +31,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
     <!-- 2. SPLIT SECTION 1 (Image Left) -->
     <section class="lux-split">
         <div class="lux-split-img">
-            <img src="images/muskan/editorial_living_room_1790770534963.jpg" alt="Our Design Philosophy">
+            <img loading="lazy" src="images/muskan/editorial_living_room_1790770534963.jpg" alt="Our Design Philosophy">
         </div>
         <div class="lux-split-content">
             <div class="lux-split-label">Our Philosophy</div>
@@ -408,7 +48,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
     <!-- 3. SPLIT SECTION 2 (Image Right) -->
     <section class="lux-split reverse">
         <div class="lux-split-img">
-            <img src="images/muskan/split_section_image_1790770626120.jpg" alt="Precision and Craft">
+            <img loading="lazy" src="images/muskan/split_section_image_1790770626120.jpg" alt="Precision and Craft">
         </div>
         <div class="lux-split-content">
             <div class="lux-split-label">Uncompromising Craft</div>
@@ -432,19 +72,19 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
         <div class="lux-cat-grid">
             <a href="wooden-work.php" class="lux-cat-card">
                 <div class="lux-cat-img-wrap">
-                    <img src="images/muskan/category_modular_kitchen_1790770566074.jpg" alt="Modular Kitchens">
+                    <img loading="lazy" src="images/muskan/category_modular_kitchen_1790770566074.jpg" alt="Modular Kitchens">
                 </div>
                 <h3 class="lux-cat-title">Modular Kitchens <i data-lucide="arrow-right"></i></h3>
             </a>
             <a href="interior-design.php" class="lux-cat-card">
                 <div class="lux-cat-img-wrap">
-                    <img src="images/muskan/category_living_room_1790770578337.jpg" alt="Living Rooms">
+                    <img loading="lazy" src="images/muskan/category_living_room_1790770578337.jpg" alt="Living Rooms">
                 </div>
                 <h3 class="lux-cat-title">Living Rooms <i data-lucide="arrow-right"></i></h3>
             </a>
             <a href="wooden-work.php" class="lux-cat-card">
                 <div class="lux-cat-img-wrap">
-                    <img src="images/muskan/category_wardrobe_1790770591392.jpg" alt="Wardrobes">
+                    <img loading="lazy" src="images/muskan/category_wardrobe_1790770591392.jpg" alt="Wardrobes">
                 </div>
                 <h3 class="lux-cat-title">Wardrobes <i data-lucide="arrow-right"></i></h3>
             </a>
@@ -453,7 +93,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
 
     <!-- 5. PROMOTIONAL BANNER -->
     <section class="lux-promo">
-        <img src="images/muskan/promo_kitchen_luxury_1790770518348.jpg" alt="Luxury Kitchen Design" class="lux-promo-img">
+        <img loading="lazy" src="images/muskan/promo_kitchen_luxury_1790770518348.jpg" alt="Luxury Kitchen Design" class="lux-promo-img">
         <div class="lux-promo-overlay"></div>
         <div class="lux-promo-content">
             <div class="lux-split-label" style="color:#fff;">Bespoke Kitchens</div>
@@ -472,7 +112,7 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
         
         <div class="lux-project-featured">
             <div class="lux-project-img-wrapper">
-                <img src="images/muskan/project_contemporary_3bhk_1790770609717.jpg" alt="Contemporary 3BHK">
+                <img loading="lazy" src="images/muskan/project_contemporary_3bhk_1790770609717.jpg" alt="Contemporary 3BHK">
             </div>
             <div class="lux-project-info">
                 <div class="lux-split-label" style="margin-bottom:15px; color:#000;">Turnkey Interior</div>
@@ -504,25 +144,25 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
 
         <div class="lux-gallery-grid">
             <a href="#" class="lux-gallery-item large">
-                <img src="images/muskan/hero_cinematic_interior_1790770500514.jpg" alt="Gallery">
+                <img loading="lazy" src="images/muskan/hero_cinematic_interior_1790770500514.jpg" alt="Gallery">
                 <div class="lux-gallery-overlay">
                     <h3>Living Spaces</h3>
                 </div>
             </a>
             <a href="#" class="lux-gallery-item tall">
-                <img src="images/muskan/editorial_bedroom_detail_1790770550172.jpg" alt="Gallery">
+                <img loading="lazy" src="images/muskan/editorial_bedroom_detail_1790770550172.jpg" alt="Gallery">
                 <div class="lux-gallery-overlay">
                     <h3>Bedroom Details</h3>
                 </div>
             </a>
             <a href="#" class="lux-gallery-item wide">
-                <img src="images/muskan/split_section_image_1790770626120.jpg" alt="Gallery">
+                <img loading="lazy" src="images/muskan/split_section_image_1790770626120.jpg" alt="Gallery">
                 <div class="lux-gallery-overlay">
                     <h3>Dining Experience</h3>
                 </div>
             </a>
             <a href="#" class="lux-gallery-item wide">
-                <img src="images/muskan/category_living_room_1790770578337.jpg" alt="Gallery">
+                <img loading="lazy" src="images/muskan/category_living_room_1790770578337.jpg" alt="Gallery">
                 <div class="lux-gallery-overlay">
                     <h3>Architectural Lighting</h3>
                 </div>
@@ -549,3 +189,5 @@ $designs = array_slice($dm->getDesigns(), 0, 4);
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+
+

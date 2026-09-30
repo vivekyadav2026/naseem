@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Exterior Design & Elevation | Muskan Interiors';
 $pageDesc = 'Premium exterior elevation and facade design in Patna. We specialize in modern villa facades, commercial elevations, and structural aesthetic modifications.';
 require_once __DIR__ . '/includes/header.php';
@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 1. CINEMATIC HERO -->
     <header class="lux-hero lux-hero-sm">
-        <img src="images/muskan/exterior_facade.jpg" alt="Exterior Facade Design" class="lux-hero-img">
+        <img fetchpriority="high" src="images/muskan/exterior_facade.jpg" alt="Exterior Facade Design" class="lux-hero-img">
         <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.95) 0%, rgba(9,11,14,0.3) 100%);"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- 2. SERVICE INTRO (SPLIT REVERSE) -->
     <section class="lux-split reverse">
         <div class="lux-split-img">
-            <img src="images/muskan/modern_elevation.jpg" alt="Modern Elevation">
+            <img loading="lazy" src="images/muskan/modern_elevation.jpg" alt="Modern Elevation">
         </div>
         <div class="lux-split-content">
             <div class="lux-split-label">Structural Aesthetics</div>
@@ -41,7 +41,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 3. WHAT'S INCLUDED (LARGE IMAGE OVERLAY) -->
     <section style="position:relative; padding:120px 0; background:var(--lux-dark); color:#fff; overflow:hidden;">
-        <img src="images/muskan/hero_villa.jpg" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.3; filter:grayscale(100%);" alt="Villa Background">
+        <img loading="lazy" src="images/muskan/hero_villa.jpg" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.3; filter:grayscale(100%);" alt="Villa Background">
         <div class="container" style="position:relative; z-index:2; max-width:1400px; margin:0 auto; padding:0 20px;">
             <div class="lux-split-label" style="color:#fff;">Exterior Services</div>
             <h2 class="lux-split-title" style="color:#fff; margin-bottom:60px;">Our Capabilities</h2>
@@ -93,7 +93,7 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
         <div class="lux-split-img">
-            <img src="images/muskan/exterior_facade.jpg" alt="Material Excellence">
+            <img loading="lazy" src="images/muskan/exterior_facade.jpg" alt="Material Excellence">
         </div>
     </section>
 
@@ -115,8 +115,8 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- 6. LEAD GENERATION CTA -->
-    <section class="lux-promo" style="height:50vh; min-height:400px;">
-        <img src="images/muskan/modern_elevation.jpg" alt="Exterior Space" class="lux-promo-img">
+    <section class="lux-promo" >
+        <img loading="lazy" src="images/muskan/modern_elevation.jpg" alt="Exterior Space" class="lux-promo-img">
         <div class="lux-promo-overlay" style="background:rgba(9,11,14,0.7);"></div>
         <div class="lux-promo-content">
             <h2 class="lux-promo-title" style="font-size:clamp(2rem, 4vw, 3.5rem);">Redefine Your Architecture</h2>
@@ -126,3 +126,5 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+
+

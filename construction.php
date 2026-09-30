@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Civil Construction | Muskan Interiors';
 $pageDesc = 'Premium civil construction and execution in Patna. From foundation to finish, we build structures with uncompromising engineering standards.';
 require_once __DIR__ . '/includes/header.php';
@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 1. CINEMATIC HERO -->
     <header class="lux-hero lux-hero-sm">
-        <img src="images/muskan/construction_site.jpg" alt="Civil Construction Site" class="lux-hero-img">
+        <img fetchpriority="high" src="images/muskan/construction_site.jpg" alt="Civil Construction Site" class="lux-hero-img">
         <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.95) 0%, rgba(9,11,14,0.4) 100%);"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -26,8 +26,8 @@ require_once __DIR__ . '/includes/header.php';
     <section class="lux-split">
         <div class="lux-split-img">
             <div style="position:absolute; inset:0; display:flex;">
-                <img src="images/muskan/before_raw.jpg" style="width:50%; height:100%; object-fit:cover; filter:grayscale(100%);" alt="Raw Site">
-                <img src="images/muskan/real_execution.jpg" style="width:50%; height:100%; object-fit:cover;" alt="Execution">
+                <img loading="lazy" src="images/muskan/before_raw.jpg" style="width:50%; height:100%; object-fit:cover; filter:grayscale(100%);" alt="Raw Site">
+                <img loading="lazy" src="images/muskan/real_execution.jpg" style="width:50%; height:100%; object-fit:cover;" alt="Execution">
             </div>
         </div>
         <div class="lux-split-content">
@@ -95,7 +95,7 @@ require_once __DIR__ . '/includes/header.php';
                     </ul>
                 </div>
                 <div style="position:relative; height:500px; border-radius:4px; overflow:hidden;">
-                    <img src="images/muskan/construction_site.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Site Supervision">
+                    <img loading="lazy" src="images/muskan/construction_site.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Site Supervision">
                 </div>
             </div>
         </div>
@@ -119,8 +119,8 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- 6. LEAD GENERATION CTA -->
-    <section class="lux-promo" style="height:50vh; min-height:400px;">
-        <img src="images/muskan/real_execution.jpg" alt="Construction Site" class="lux-promo-img">
+    <section class="lux-promo" >
+        <img loading="lazy" src="images/muskan/real_execution.jpg" alt="Construction Site" class="lux-promo-img">
         <div class="lux-promo-overlay" style="background:rgba(9,11,14,0.8);"></div>
         <div class="lux-promo-content">
             <h2 class="lux-promo-title" style="font-size:clamp(2rem, 4vw, 3.5rem);">Start Your Build Properly</h2>
@@ -130,3 +130,5 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+
+

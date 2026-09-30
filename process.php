@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Our 5-Step Turnkey Process — Muskan Interiors';
 $pageDesc = 'Discover how Muskan Interiors delivers turnkey spaces in 5 transparent steps: Consultation, 3D Design, Civil Execution, Finishing, and 100-Point Audit.';
 require_once __DIR__ . '/includes/header.php';
@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- PAGE HERO BANNER -->
     <header class="lux-hero lux-hero-sm">
-        <img src="C:\Users\ranje\.gemini\antigravity\brain\01efbde6-c06f-437f-bf0e-0596396852ca\projects_hero_1790771589193.jpg" class="lux-hero-img" alt="Process Hero">
+        <img fetchpriority="high" src="C:\Users\ranje\.gemini\antigravity\brain\01efbde6-c06f-437f-bf0e-0596396852ca\projects_hero_1790771589193.jpg" class="lux-hero-img" alt="Process Hero">
         <div class="lux-hero-overlay"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -103,7 +103,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- CTA SECTION -->
     <section class="lux-promo">
-        <img src="C:\Users\ranje\.gemini\antigravity\brain\01efbde6-c06f-437f-bf0e-0596396852ca\projects_hero_1790771589193.jpg" class="lux-promo-img" alt="Experience">
+        <img loading="lazy" src="C:\Users\ranje\.gemini\antigravity\brain\01efbde6-c06f-437f-bf0e-0596396852ca\projects_hero_1790771589193.jpg" class="lux-promo-img" alt="Experience">
         <div class="lux-promo-overlay"></div>
         <div class="lux-promo-content">
             <h2 class="lux-promo-title">Experience Institutional-Grade Execution</h2>
@@ -118,3 +118,4 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+

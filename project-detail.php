@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/config/db.php';
 
@@ -33,7 +33,7 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
 
     <!-- PROJECT HEADER BANNER -->
     <header class="lux-hero">
-        <img src="<?= htmlspecialchars($project['featured_image']) ?>" class="lux-hero-img" alt="Project Hero">
+        <img loading="lazy" src="<?= htmlspecialchars($project['featured_image']) ?>" class="lux-hero-img" alt="Project Hero">
         <div class="lux-hero-overlay"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -42,6 +42,21 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
             <h1 class="lux-hero-title"><?= htmlspecialchars($project['title']) ?></h1>
             <p class="lux-hero-subtitle"><?= htmlspecialchars($project['short_desc']) ?></p>
             
+            <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;">
+                <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--lux-gold);">Location</div>
+                    <div style="font-size: 15px; font-weight: 500;"><?= htmlspecialchars($project['location'] ?? 'Patna, Bihar') ?></div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--lux-gold);">Type</div>
+                    <div style="font-size: 15px; font-weight: 500;"><?= htmlspecialchars($project['category'] ?? 'Turnkey') ?></div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--lux-gold);">Style</div>
+                    <div style="font-size: 15px; font-weight: 500;">Contemporary Luxury</div>
+                </div>
+            </div>
+
             <div class="lux-btn-group">
                 <a href="contact.php" class="lux-btn lux-btn-primary">
                     <i data-lucide="phone" style="width:15px;height:15px;"></i> Contact Studio
@@ -53,85 +68,68 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
         </div>
     </header>
 
-    <!-- PROJECT SHOWCASE / INFO -->
-    <section class="lux-project-section">
-        <div class="lux-project-featured">
-            <div class="lux-project-info">
-                <div class="lux-split-label">Project Details</div>
-                <h3 style="font-size: 28px; margin-bottom: 20px; font-weight: 300;">Scope & Execution</h3>
-                <p style="color: #666; margin-bottom: 20px;">
-                    <strong>Client:</strong> <?= htmlspecialchars($project['client_name'] ?? 'Private Client') ?><br>
-                    <strong>Location:</strong> <?= htmlspecialchars($project['location'] ?? 'Patna, Bihar') ?><br>
-                    <strong>Area:</strong> <?= htmlspecialchars($project['area'] ?? 'N/A') ?><br>
-                    <strong>Budget:</strong> <?= htmlspecialchars($project['budget'] ?? 'N/A') ?><br>
-                    <strong>Timeline:</strong> <?= htmlspecialchars($project['timeline'] ?? '45 Days') ?>
-                </p>
-                <p style="color: #666; line-height: 1.6;">
+    <!-- THE STORY (PROJECT SHOWCASE) -->
+    <section class="lux-project-section" style="background: #fff; color: var(--lux-dark); padding: 100px 0;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div class="lux-split-label">The Story</div>
+                <h2 class="lux-split-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 30px;">Designing for Modern Living</h2>
+                <p style="font-size: 18px; line-height: 1.8; color: #555; margin-bottom: 40px;">
                     <?= nl2br(htmlspecialchars($project['full_desc'])) ?>
                 </p>
-            </div>
-            <div class="lux-project-img-wrapper">
-                <img src="<?= htmlspecialchars(!empty($project['stage_final_img']) ? $project['stage_final_img'] : 'images/muskan/after_luxury.jpg') ?>" alt="Project Final">
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; background: var(--lux-gray); padding: 40px; border-radius: 8px;">
+                    <div>
+                        <strong style="display: block; font-size: 13px; text-transform: uppercase; color: var(--lux-gold); margin-bottom: 8px;">Client</strong>
+                        <span style="font-size: 16px;"><?= htmlspecialchars($project['client_name'] ?? 'Private Client') ?></span>
+                    </div>
+                    <div>
+                        <strong style="display: block; font-size: 13px; text-transform: uppercase; color: var(--lux-gold); margin-bottom: 8px;">Area</strong>
+                        <span style="font-size: 16px;"><?= htmlspecialchars($project['area'] ?? 'N/A') ?></span>
+                    </div>
+                    <div>
+                        <strong style="display: block; font-size: 13px; text-transform: uppercase; color: var(--lux-gold); margin-bottom: 8px;">Budget</strong>
+                        <span style="font-size: 16px;"><?= htmlspecialchars($project['budget'] ?? 'N/A') ?></span>
+                    </div>
+                    <div>
+                        <strong style="display: block; font-size: 13px; text-transform: uppercase; color: var(--lux-gold); margin-bottom: 8px;">Timeline</strong>
+                        <span style="font-size: 16px;"><?= htmlspecialchars($project['timeline'] ?? '45 Days') ?></span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 4-STAGE VISUAL TRANSFORMATION TIMELINE -->
+    <!-- PROJECT HIGHLIGHTS -->
     <section class="lux-category-section" style="background:var(--lux-gray);">
         <div class="container" style="text-align: center; margin-bottom: 60px;">
-            <div class="lux-split-label">Complete Visual Timeline</div>
-            <h2 class="lux-split-title">The 4-Stage Transformation Journey</h2>
+            <div class="lux-split-label">Highlights</div>
+            <h2 class="lux-split-title">Key Design Elements</h2>
         </div>
 
         <div class="lux-split">
             <div class="lux-split-content">
-                <div class="lux-split-label">STAGE 01</div>
-                <h3 class="lux-split-title" style="font-size: 2rem;">Initial Site Condition & Dimensional Audit</h3>
-                <p class="lux-split-desc">
-                    Laser measurement audit, structural column check, load-bearing assessments, and MEP electrical/plumbing conduit mapping. Identification of dampness, wall relocations, and ceiling heights.
-                </p>
-            </div>
-            <div class="lux-split-img">
-                <img src="<?= htmlspecialchars(!empty($project['stage_before_img']) ? $project['stage_before_img'] : 'images/muskan/before_raw.jpg') ?>" alt="Stage 1 Raw Site">
-            </div>
-        </div>
-
-        <div class="lux-split reverse">
-            <div class="lux-split-content">
-                <div class="lux-split-label">STAGE 02</div>
+                <div class="lux-split-label">01 / Concept</div>
                 <h3 class="lux-split-title" style="font-size: 2rem;">2D Space Layout & 3D Photoreal CAD Render</h3>
                 <p class="lux-split-desc">
                     Architectural space optimization and 4K photorealistic rendering. Client approved every texture, warm 3000K profile lighting cove, veneer finish, and modular kitchen hardware before site initiation.
                 </p>
             </div>
             <div class="lux-split-img">
-                <img src="<?= htmlspecialchars(!empty($project['stage_design_img']) ? $project['stage_design_img'] : 'images/muskan/3d_render.jpg') ?>" alt="Stage 2 3D Render">
-            </div>
-        </div>
-
-        <div class="lux-split">
-            <div class="lux-split-content">
-                <div class="lux-split-label">STAGE 03</div>
-                <h3 class="lux-split-title" style="font-size: 2rem;">Civil, MEP & Precision Carpentry Execution</h3>
-                <p class="lux-split-desc">
-                    Execution under senior civil supervision. Concealed electrical wiring, gypsum false ceiling grids, BWP 710 marine ply carcass construction, plumbing lines, and Italian marble laying.
-                </p>
-            </div>
-            <div class="lux-split-img">
-                <img src="<?= htmlspecialchars(!empty($project['stage_execution_img']) ? $project['stage_execution_img'] : 'images/muskan/real_execution.jpg') ?>" alt="Stage 3 Civil Execution">
+                <img loading="lazy" src="<?= htmlspecialchars(!empty($project['stage_design_img']) ? $project['stage_design_img'] : 'images/muskan/3d_render.jpg') ?>" alt="Concept & Design">
             </div>
         </div>
 
         <div class="lux-split reverse">
             <div class="lux-split-content">
-                <div class="lux-split-label">STAGE 04</div>
-                <h3 class="lux-split-title" style="font-size: 2rem;">Final Luxury Result & 100-Point Quality Audit</h3>
+                <div class="lux-split-label">02 / Execution</div>
+                <h3 class="lux-split-title" style="font-size: 2rem;">Final Luxury Result & Quality Audit</h3>
                 <p class="lux-split-desc">
-                    High-gloss PU polishing, soft-close hardware testing, magnetic track lighting tuning, industrial deep cleaning, and ceremonial key handover with comprehensive warranty documents.
+                    Execution under senior civil supervision. High-gloss PU polishing, soft-close hardware testing, magnetic track lighting tuning, industrial deep cleaning, and ceremonial key handover.
                 </p>
             </div>
             <div class="lux-split-img">
-                <img src="<?= htmlspecialchars(!empty($project['stage_final_img']) ? $project['stage_final_img'] : 'images/muskan/after_luxury.jpg') ?>" alt="Stage 4 Final Result">
+                <img loading="lazy" src="<?= htmlspecialchars(!empty($project['stage_final_img']) ? $project['stage_final_img'] : 'images/muskan/after_luxury.jpg') ?>" alt="Execution & Final">
             </div>
         </div>
     </section>
@@ -157,12 +155,14 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
         <?php if (!empty($gallery)): ?>
             <div class="lux-gallery-grid">
                 <?php foreach ($gallery as $index => $gImg): 
-                    $class = 'tall';
-                    if ($index % 4 == 0) $class = 'large';
-                    elseif ($index % 4 == 1) $class = 'wide';
+                    // Create a masonry layout using different sizing classes
+                    $class = 'wide';
+                    if ($index % 3 == 0) $class = 'large'; // 2/3 width
+                    elseif ($index % 3 == 1) $class = 'tall'; // 1/3 width, tall
+                    else $class = 'wide'; // 1/2 width
                 ?>
                     <a href="#" class="lux-gallery-item <?= $class ?>">
-                        <img src="<?= htmlspecialchars($gImg) ?>" alt="Gallery Image">
+                        <img loading="lazy" src="<?= htmlspecialchars($gImg) ?>" alt="Gallery Image">
                         <div class="lux-gallery-overlay"></div>
                     </a>
                 <?php endforeach; ?>
@@ -170,9 +170,37 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
         <?php endif; ?>
     </section>
 
+    <!-- RELATED PROJECTS -->
+    <section class="lux-category-section" style="background: var(--lux-dark); color: #fff;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <div class="lux-split-label" style="color: var(--lux-gold);">Explore More</div>
+                <h2 class="lux-split-title" style="color: #fff;">Related Projects</h2>
+            </div>
+            <div class="lux-cat-grid">
+                <?php 
+                $related = array_slice($dm->getProjects(), 0, 3);
+                foreach ($related as $p): 
+                    if ($p['id'] == $project['id']) continue; // Skip current
+                ?>
+                    <a href="project-detail.php?id=<?= $p['id'] ?>" class="lux-cat-card" style="border-radius: 8px; overflow: hidden; background: #1a1a1a;">
+                        <div class="lux-cat-img-wrap" style="aspect-ratio: 4/3; margin-bottom: 0;">
+                            <img loading="lazy" src="<?= htmlspecialchars($p['featured_image']) ?>" alt="<?= htmlspecialchars($p['title']) ?>" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+                            <div style="position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); opacity: 0.8; z-index: 1;"></div>
+                            <div style="position:absolute; bottom:20px; left:20px; right:20px; z-index:2; color:#fff;">
+                                <div style="font-size: 11px; color: var(--lux-gold); text-transform: uppercase; margin-bottom: 5px;"><?= htmlspecialchars($p['category']) ?></div>
+                                <h3 style="font-size: 20px; font-weight: 400;"><?= htmlspecialchars($p['title']) ?></h3>
+                            </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
     <!-- CONSULTATION FORM -->
     <section class="lux-promo" style="height: auto; padding: 100px 0;">
-        <img src="<?= htmlspecialchars($project['featured_image']) ?>" class="lux-promo-img" alt="CTA">
+        <img loading="lazy" src="<?= htmlspecialchars($project['featured_image']) ?>" class="lux-promo-img" alt="CTA">
         <div class="lux-promo-overlay" style="background: rgba(0,0,0,0.8);"></div>
         <div class="lux-promo-content" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; color: var(--lux-text);">
             <div class="lux-split-label" style="text-align: center;">Want a Similar Space?</div>
@@ -209,10 +237,10 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
             .then(res => res.json())
             .then(data => {
                 if(data.success) {
-                    alert('🎉 ' + data.message + '\nLead Reference ID: ' + data.lead_id);
+                    alert('ðŸŽ‰ ' + data.message + '\nLead Reference ID: ' + data.lead_id);
                     form.reset();
                 } else {
-                    alert('⚠️ ' + data.message);
+                    alert('âš ï¸ ' + data.message);
                 }
             })
             .catch(err => {
@@ -223,3 +251,4 @@ $gallery = is_array($project['gallery_images'] ?? null) ? $project['gallery_imag
     </script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+

@@ -1,14 +1,14 @@
-    <!-- FOOTER -->
+﻿    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-                        <div style="width:32px; height:32px; background:var(--gold); color:#0F141C; font-family:'Cinzel',serif; font-weight:700; display:flex; align-items:center; justify-content:center; border-radius:4px; font-size:16px;">M</div>
+                        <div style="width:32px; height:32px; display:flex; align-items:center; justify-content:center;"><svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="15" fill="#C59A3F"/><path d="M25 70V30L50 55L75 30V70" stroke="#090B0E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                         <h3 style="margin:0; font-size:18px;">MUSKAN INTERIORS</h3>
                     </div>
                     <p>We Design. We Build. We Transform. Complete turnkey architecture and bespoke interior craftsmanship across Patna and Bihar.</p>
-                    <p style="font-size:12px; color:#64748B; margin-top:12px;">📍 <?= SITE_ADDRESS ?></p>
+                    <p style="font-size:12px; color:#64748B; margin-top:12px;">ðŸ“ <?= SITE_ADDRESS ?></p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
@@ -37,11 +37,11 @@
                     <p>WhatsApp: <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" style="color:#25D366; text-decoration:none;">+91 98765 43210</a></p>
                     <p>Email: <a href="mailto:<?= SITE_EMAIL ?>" style="color:#CBD5E1; text-decoration:none;"><?= SITE_EMAIL ?></a></p>
                     <p style="font-size:12px; color:#64748B; margin-top:6px;">Mon – Sat: 9:30 AM – 7:30 PM</p>
-                    <p style="font-size:12px; color:var(--gold); margin-top:10px;">★ Bihar's Premier Turnkey Studio</p>
+                    <p style="font-size:12px; color:var(--gold); margin-top:10px;">â˜… Bihar's Premier Turnkey Studio</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>© <?= date('Y') ?> Muskan Interiors. All Rights Reserved.</div>
+                <div>Â© <?= date('Y') ?> Muskan Interiors. All Rights Reserved.</div>
                 <div style="color:#64748B;">
                     Architecture &bull; Civil &bull; Interiors &bull; Joinery
                 </div>
@@ -80,3 +80,4 @@
     </script>
 </body>
 </html>
+

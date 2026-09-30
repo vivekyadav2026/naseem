@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'About Us — More Than Interiors. We Build Complete Spaces.';
 $pageDesc = 'Discover the legacy of Muskan Interiors — 10+ years, 100+ turnkey projects delivered, 8-point edge, and architectural mastery across Patna and Bihar.';
 require_once __DIR__ . '/includes/header.php';
@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 1. CINEMATIC HERO (ABOUT) -->
     <header class="lux-hero lux-hero-sm">
-        <img src="images/muskan/about_hero_1790771391287.jpg" alt="Muskan Interiors Design Team" class="lux-hero-img">
+        <img fetchpriority="high" src="images/muskan/about_hero_1790771391287.jpg" alt="Muskan Interiors Design Team" class="lux-hero-img">
         <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.9) 0%, rgba(9,11,14,0.4) 100%);"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -22,7 +22,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- 2. BRAND STORY SPLIT SECTION -->
     <section class="lux-split">
         <div class="lux-split-img">
-            <img src="images/muskan/after_luxury.jpg" alt="Our Legacy & Philosophy">
+            <img loading="lazy" src="images/muskan/after_luxury.jpg" alt="Our Legacy & Philosophy">
         </div>
         <div class="lux-split-content">
             <div class="lux-split-label">Our Legacy</div>
@@ -131,3 +131,4 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+

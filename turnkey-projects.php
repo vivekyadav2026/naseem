@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Turnkey Interior Projects | Muskan Interiors';
 $pageDesc = 'One contract. Zero stress. Complete turnkey interior and civil execution in Patna by Muskan Interiors.';
 require_once __DIR__ . '/includes/header.php';
@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 1. CINEMATIC HERO -->
     <header class="lux-hero lux-hero-sm">
-        <img src="images/muskan/hero_cinematic_interior_1790770500514.jpg" alt="Turnkey Luxury Project" class="lux-hero-img">
+        <img fetchpriority="high" src="images/muskan/hero_cinematic_interior_1790770500514.jpg" alt="Turnkey Luxury Project" class="lux-hero-img">
         <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.95) 0%, rgba(9,11,14,0.4) 100%);"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- 2. INTRO (SPLIT SECTION) -->
     <section class="lux-split reverse">
         <div class="lux-split-img">
-            <img src="images/muskan/project_contemporary_3bhk_1790770609717.jpg" alt="Complete Turnkey Space">
+            <img loading="lazy" src="images/muskan/project_contemporary_3bhk_1790770609717.jpg" alt="Complete Turnkey Space">
         </div>
         <div class="lux-split-content">
             <div class="lux-split-label">End-to-End Delivery</div>
@@ -107,15 +107,15 @@ require_once __DIR__ . '/includes/header.php';
                     </ul>
                 </div>
                 <div>
-                    <img src="images/muskan/editorial_bedroom_detail_1790770550172.jpg" style="width:100%; border-radius:4px;" alt="Turnkey Finish">
+                    <img loading="lazy" src="images/muskan/editorial_bedroom_detail_1790770550172.jpg" style="width:100%; border-radius:4px;" alt="Turnkey Finish">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 5. CTA -->
-    <section class="lux-promo" style="height:50vh; min-height:400px;">
-        <img src="images/muskan/after_luxury.jpg" alt="Ready Space" class="lux-promo-img">
+    <section class="lux-promo" >
+        <img loading="lazy" src="images/muskan/after_luxury.jpg" alt="Ready Space" class="lux-promo-img">
         <div class="lux-promo-overlay" style="background:rgba(9,11,14,0.7);"></div>
         <div class="lux-promo-content">
             <h2 class="lux-promo-title" style="font-size:clamp(2rem, 4vw, 3.5rem);">Build Your Space Without The Stress</h2>
@@ -125,3 +125,5 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+
+

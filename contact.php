@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Contact Us — Book Free Site Consultation | Muskan Interiors';
 $pageDesc = 'Get in touch with Muskan Interiors in Patna for interior design, 3D CAD elevations, civil construction, and modular woodwork.';
 require_once __DIR__ . '/includes/header.php';
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- 1. CINEMATIC HERO (CONTACT) -->
     <header class="lux-hero lux-hero-sm">
-        <img src="images/muskan/contact_hero_1790771405051.jpg" alt="Luxury Home Office" class="lux-hero-img">
+        <img fetchpriority="high" src="images/muskan/contact_hero_1790771405051.jpg" alt="Luxury Home Office" class="lux-hero-img">
         <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.95) 0%, rgba(9,11,14,0.5) 100%);"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -191,3 +191,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+

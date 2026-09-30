@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Interior Design Services | Muskan Interiors';
 $pageDesc = 'Bespoke luxury interior design in Patna. We craft perfect living spaces with institutional-grade materials.';
 require_once __DIR__ . '/includes/header.php';
@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 1. CINEMATIC HERO -->
     <header class="lux-hero lux-hero-sm">
-        <img src="images/muskan/category_living_room_1790770578337.jpg" alt="Luxury Interior Design" class="lux-hero-img">
+        <img fetchpriority="high" src="images/muskan/category_living_room_1790770578337.jpg" alt="Luxury Interior Design" class="lux-hero-img">
         <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.95) 0%, rgba(9,11,14,0.3) 100%);"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- 2. SERVICE INTRO (SPLIT) -->
     <section class="lux-split">
         <div class="lux-split-img">
-            <img src="images/muskan/editorial_living_room_1790770534963.jpg" alt="Living Room Styling">
+            <img loading="lazy" src="images/muskan/editorial_living_room_1790770534963.jpg" alt="Living Room Styling">
         </div>
         <div class="lux-split-content">
             <div class="lux-split-label">Precision & Aesthetics</div>
@@ -78,25 +78,25 @@ require_once __DIR__ . '/includes/header.php';
         </div>
         <div class="lux-gallery-grid">
             <a href="#" class="lux-gallery-item large">
-                <img src="images/muskan/project_contemporary_3bhk_1790770609717.jpg" alt="Living Room">
+                <img loading="lazy" src="images/muskan/project_contemporary_3bhk_1790770609717.jpg" alt="Living Room">
                 <div class="lux-gallery-overlay">
                     <h3>Contemporary Living</h3>
                 </div>
             </a>
             <a href="#" class="lux-gallery-item tall">
-                <img src="images/muskan/editorial_bedroom_detail_1790770550172.jpg" alt="Bedroom Detail">
+                <img loading="lazy" src="images/muskan/editorial_bedroom_detail_1790770550172.jpg" alt="Bedroom Detail">
                 <div class="lux-gallery-overlay">
                     <h3>Bespoke Bedrooms</h3>
                 </div>
             </a>
             <a href="#" class="lux-gallery-item wide">
-                <img src="images/muskan/interior_living.jpg" alt="Living Lounge">
+                <img loading="lazy" src="images/muskan/interior_living.jpg" alt="Living Lounge">
                 <div class="lux-gallery-overlay">
                     <h3>Living Lounges</h3>
                 </div>
             </a>
             <a href="#" class="lux-gallery-item wide">
-                <img src="images/muskan/living_room.jpg" alt="Modern Styling">
+                <img loading="lazy" src="images/muskan/living_room.jpg" alt="Modern Styling">
                 <div class="lux-gallery-overlay">
                     <h3>Modern Styling</h3>
                 </div>
@@ -161,8 +161,8 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- 7. LEAD GENERATION CTA -->
-    <section class="lux-promo" style="height:50vh; min-height:400px;">
-        <img src="images/muskan/after_luxury.jpg" alt="Interior Space" class="lux-promo-img">
+    <section class="lux-promo" >
+        <img loading="lazy" src="images/muskan/after_luxury.jpg" alt="Interior Space" class="lux-promo-img">
         <div class="lux-promo-overlay" style="background:rgba(9,11,14,0.7);"></div>
         <div class="lux-promo-content">
             <h2 class="lux-promo-title" style="font-size:clamp(2rem, 4vw, 3.5rem);">Ready to transform your space?</h2>
@@ -172,3 +172,5 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+
+

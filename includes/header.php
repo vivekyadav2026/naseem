@@ -13,6 +13,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($pageTitle) ? htmlspecialchars($pageTitle) . ' — Muskan Interiors' : 'Muskan Interiors | More Than Interiors. We Build Complete Spaces.' ?></title>
     <meta name="description" content="<?= isset($pageDesc) ? htmlspecialchars($pageDesc) : 'Complete interior design, exterior elevation, civil construction, and bespoke wooden joinery in Patna.' ?>">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +31,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <div class="container">
             <div class="nav-wrap">
                 <a href="index.php" class="brand-logo">
-                    <div class="logo-symbol">M</div>
+                    <div class="logo-symbol" style="background:transparent; padding:0; display:flex; align-items:center; justify-content:center;">
+                        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" rx="15" fill="var(--lux-dark)"/>
+                            <path d="M25 70V30L50 55L75 30V70" stroke="var(--lux-gold)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <div class="brand-text">
                         <h2>MUSKAN</h2>
                         <span>INTERIORS & BUILD</span>
@@ -45,7 +51,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                             Services <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
                         </a>
                         <div class="nav-dropdown">
-                            <a href="interior-design.php"><i data-lucide="layout" style="width:14px;height:14px;"></i> Interior Design</a>
+                            <a href="interior-design.php"><i data-lucide="layout" style="width:14px;height:14px;"></i> Interior Design</a><a href="modular-kitchen.php"><i data-lucide="layout" style="width:14px;height:14px;"></i> Modular Kitchens</a>
                             <a href="exterior-design.php"><i data-lucide="building" style="width:14px;height:14px;"></i> Exterior Design</a>
                             <a href="construction.php"><i data-lucide="hammer" style="width:14px;height:14px;"></i> Civil Construction</a>
                             <a href="wooden-work.php"><i data-lucide="box" style="width:14px;height:14px;"></i> Wooden Work</a>
@@ -78,7 +84,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <div class="mobile-nav-drawer" id="mobileDrawer">
         <div class="mobile-drawer-header">
             <div class="brand-logo">
-                <div class="logo-symbol" style="width:34px;height:34px;font-size:16px;">M</div>
+                <div class="logo-symbol" style="background:transparent; padding:0; display:flex; align-items:center; justify-content:center; width:34px; height:34px;">
+                    <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100" height="100" rx="15" fill="var(--lux-dark)"/>
+                        <path d="M25 70V30L50 55L75 30V70" stroke="var(--lux-gold)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <div class="brand-text">
                     <h2 style="font-size:15px; color:#FFFFFF;">MUSKAN</h2>
                     <span style="font-size:8.5px;">INTERIORS</span>
@@ -93,7 +104,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             <a href="about.php" class="<?= $currentPage === 'about.php' ? 'active' : '' ?>"><i data-lucide="compass" style="width:16px;height:16px;"></i> About Us</a>
             <a href="services.php" class="<?= $currentPage === 'services.php' ? 'active' : '' ?>"><i data-lucide="layers" style="width:16px;height:16px;"></i> All Services</a>
             <div class="mobile-sublinks">
-                <a href="interior-design.php">Interior Design</a>
+                <a href="interior-design.php">Interior Design</a><a href="modular-kitchen.php">Modular Kitchens</a>
                 <a href="exterior-design.php">Exterior Design</a>
                 <a href="construction.php">Civil Construction</a>
                 <a href="wooden-work.php">Wooden Work</a>
@@ -112,3 +123,4 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             </a>
         </div>
     </div>
+

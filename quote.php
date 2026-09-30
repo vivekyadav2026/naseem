@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Instant Turnkey Cost Calculator — Muskan Interiors';
 $pageDesc = 'Calculate instant turnkey interior, civil construction, modular kitchen, and architectural costs in Patna.';
 require_once __DIR__ . '/includes/header.php';
@@ -170,7 +170,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- PAGE HERO BANNER -->
     <header class="lux-hero lux-hero-sm">
-        <img src="C:\Users\ranje\.gemini\antigravity\brain\01efbde6-c06f-437f-bf0e-0596396852ca\projects_hero_1790771589193.jpg" class="lux-hero-img" alt="Quote Hero">
+        <img fetchpriority="high" src="C:\Users\ranje\.gemini\antigravity\brain\01efbde6-c06f-437f-bf0e-0596396852ca\projects_hero_1790771589193.jpg" class="lux-hero-img" alt="Quote Hero">
         <div class="lux-hero-overlay"></div>
         <div class="lux-hero-content">
             <div class="lux-breadcrumb">
@@ -260,7 +260,7 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="package-card" onclick="setPackage('standard', 1250, 'Standard Essential', this)">
                             <div class="package-header">
                                 <div class="package-name">Essential Standard</div>
-                                <div class="package-price">₹1,250 / sq.ft</div>
+                                <div class="package-price">â‚¹1,250 / sq.ft</div>
                             </div>
                             <div class="package-desc">
                                 Commercial ply with 0.8mm matte laminates, gypsum false ceiling with warm LED coves, Asian Paints Royale emulsion, branded modular switches, and stainless steel hardware.
@@ -269,8 +269,8 @@ require_once __DIR__ . '/includes/header.php';
 
                         <div class="package-card active" onclick="setPackage('premium', 1850, 'Premium Signature', this)">
                             <div class="package-header">
-                                <div class="package-name">★ Premium Signature (Most Popular)</div>
-                                <div class="package-price">₹1,850 / sq.ft</div>
+                                <div class="package-name">â˜… Premium Signature (Most Popular)</div>
+                                <div class="package-price">â‚¹1,850 / sq.ft</div>
                             </div>
                             <div class="package-desc">
                                 Gurjan BWP 710 waterproof plywood, 1mm high-gloss & acrylic laminates, fluted louvers, designer profile lighting, Hafele soft-close hinges, quartz kitchen slabs, and PU texture accents.
@@ -280,7 +280,7 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="package-card" onclick="setPackage('luxury', 2800, 'Luxury Royal Bespoke', this)">
                             <div class="package-header">
                                 <div class="package-name">Luxury Royal Bespoke</div>
-                                <div class="package-price">₹2,800 / sq.ft</div>
+                                <div class="package-price">â‚¹2,800 / sq.ft</div>
                             </div>
                             <div class="package-desc">
                                 Marine ply with natural teak veneer + high-gloss PU polishing, Italian marble cladding, smart home magnetic tracks, smoked glass aluminium walk-in wardrobes, and bespoke acoustic panels.
@@ -299,7 +299,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" checked onclick="event.stopPropagation()">
                                 <span>Gourmet Modular Kitchen (Quartz + Soft Close Tandem)</span>
                             </div>
-                            <div style="font-size:13px; color:var(--lux-gold);">+₹2,20,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+â‚¹2,20,000</div>
                         </div>
 
                         <div class="addon-item active" onclick="toggleAddon('wardrobes', 160000, 'Smoked Glass Walk-in Wardrobes (2 Units)', this)">
@@ -307,7 +307,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" checked onclick="event.stopPropagation()">
                                 <span>Smoked Glass Walk-in Wardrobes (2 Master Units)</span>
                             </div>
-                            <div style="font-size:13px; color:var(--lux-gold);">+₹1,60,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+â‚¹1,60,000</div>
                         </div>
 
                         <div class="addon-item" onclick="toggleAddon('facade', 180000, 'Exterior Architectural Facade Cladding', this)">
@@ -315,7 +315,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" onclick="event.stopPropagation()">
                                 <span>Exterior Architectural Facade & Front Elevation Cladding</span>
                             </div>
-                            <div style="font-size:13px; color:var(--lux-gold);">+₹1,80,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+â‚¹1,80,000</div>
                         </div>
 
                         <div class="addon-item" onclick="toggleAddon('automation', 85000, 'Smart Touch Automation & Ambient Lighting', this)">
@@ -323,7 +323,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" onclick="event.stopPropagation()">
                                 <span>Smart Home Touch Automation & App-Controlled Lighting</span>
                             </div>
-                            <div style="font-size:13px; color:var(--lux-gold);">+₹85,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+â‚¹85,000</div>
                         </div>
 
                         <div class="addon-item" onclick="toggleAddon('civil', 140000, 'Civil Remodeling & Wall Relocation', this)">
@@ -331,7 +331,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" onclick="event.stopPropagation()">
                                 <span>Civil Remodeling, Tile Replacement & Wall Relocation</span>
                             </div>
-                            <div style="font-size:13px; color:var(--lux-gold);">+₹1,40,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+â‚¹1,40,000</div>
                         </div>
                     </div>
 
@@ -342,7 +342,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="quote-summary-card">
                         <span style="font-size:11px; color:var(--lux-gold); text-transform:uppercase; letter-spacing:0.1em;">Estimated Budget Summary</span>
                         
-                        <div class="price-display-big" id="grandTotalDisplay">₹32,47,500</div>
+                        <div class="price-display-big" id="grandTotalDisplay">â‚¹32,47,500</div>
                         <p style="font-size:12px; color:#aaa; margin-bottom:20px;">* Includes design, 3D visualization, materials, labor & turnkey execution.</p>
 
                         <div style="margin-bottom:24px;">
@@ -356,19 +356,19 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                             <div class="summary-row">
                                 <span>Selected Tier:</span>
-                                <strong id="sumTier" style="color:#fff;">Premium Signature (₹1,850/sq.ft)</strong>
+                                <strong id="sumTier" style="color:#fff;">Premium Signature (â‚¹1,850/sq.ft)</strong>
                             </div>
                             <div class="summary-row">
                                 <span>Base Turnkey Cost:</span>
-                                <strong id="sumBaseCost" style="color:#fff;">₹28,67,500</strong>
+                                <strong id="sumBaseCost" style="color:#fff;">â‚¹28,67,500</strong>
                             </div>
                             <div class="summary-row">
                                 <span>Selected Add-Ons:</span>
-                                <strong id="sumAddonsCost" style="color:#fff;">₹3,80,000</strong>
+                                <strong id="sumAddonsCost" style="color:#fff;">â‚¹3,80,000</strong>
                             </div>
                             <div class="summary-row total">
                                 <span>Grand Turnkey Total:</span>
-                                <span id="sumTotal" style="color:var(--lux-gold);">₹32,47,500</span>
+                                <span id="sumTotal" style="color:var(--lux-gold);">â‚¹32,47,500</span>
                             </div>
                         </div>
 
@@ -394,7 +394,7 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
 
                         <div style="margin-top:20px; text-align:center; font-size:12px; color:#aaa;">
-                            🔒 100% Price Lock Guarantee. No hidden or surprise charges.
+                            ðŸ”’ 100% Price Lock Guarantee. No hidden or surprise charges.
                         </div>
                     </div>
                 </div>
@@ -415,7 +415,7 @@ require_once __DIR__ . '/includes/header.php';
         };
 
         function formatINR(val) {
-            return '₹' + Number(val).toLocaleString('en-IN');
+            return 'â‚¹' + Number(val).toLocaleString('en-IN');
         }
 
         function recalculate() {
@@ -520,14 +520,14 @@ require_once __DIR__ . '/includes/header.php';
             .then(res => res.json())
             .then(data => {
                 if(data.success) {
-                    alert(`🎉 Congratulations ${name}!\nYour formal BOQ quotation for ${formatINR(grandTotal)} has been logged.\nLead ID: ${data.lead_id}\nOur project estimator will WhatsApp you the complete itemized breakdown.`);
+                    alert(`ðŸŽ‰ Congratulations ${name}!\nYour formal BOQ quotation for ${formatINR(grandTotal)} has been logged.\nLead ID: ${data.lead_id}\nOur project estimator will WhatsApp you the complete itemized breakdown.`);
                     document.getElementById('quoteLockForm').reset();
                 } else {
-                    alert('⚠️ ' + data.message);
+                    alert('âš ï¸ ' + data.message);
                 }
             })
             .catch(err => {
-                alert(`🎉 Estimate for ${formatINR(grandTotal)} recorded successfully.`);
+                alert(`ðŸŽ‰ Estimate for ${formatINR(grandTotal)} recorded successfully.`);
                 document.getElementById('quoteLockForm').reset();
             });
         }
@@ -537,3 +537,4 @@ require_once __DIR__ . '/includes/header.php';
     </script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
+
