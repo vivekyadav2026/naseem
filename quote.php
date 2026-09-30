@@ -13,31 +13,30 @@ require_once __DIR__ . '/includes/header.php';
         }
         .calc-card {
             background: #fff;
-            border: 1px solid var(--border);
-            border-radius: 12px;
+            border: 1px solid #eaeaea;
+            border-radius: 4px;
             padding: 36px;
             margin-bottom: 24px;
         }
         .calc-section-title {
             font-size: 18px;
-            font-weight: 700;
+            font-family: var(--font-display);
+            font-weight: 300;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 12px;
-            color: #0F141C;
+            color: var(--lux-dark);
         }
         .calc-section-title span {
             width: 28px;
             height: 28px;
-            background: #0F141C;
-            color: var(--gold);
-            border-radius: 50%;
+            background: var(--lux-dark);
+            color: var(--lux-gold);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             font-size: 13px;
-            font-family: 'IBM Plex Mono', monospace;
         }
         .select-pill-grid {
             display: grid;
@@ -45,54 +44,48 @@ require_once __DIR__ . '/includes/header.php';
             gap: 12px;
         }
         .pill-option {
-            border: 1.5px solid var(--border);
-            border-radius: 8px;
+            border: 1px solid #eaeaea;
             padding: 14px 10px;
             text-align: center;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             background: #fff;
             user-select: none;
         }
         .pill-option:hover {
-            border-color: var(--gold);
-            background: #FDFCFA;
+            border-color: var(--lux-gold);
         }
         .pill-option.active {
-            border-color: var(--gold);
-            background: #0F141C;
+            border-color: var(--lux-gold);
+            background: var(--lux-dark);
             color: #fff;
         }
         .pill-option.active .pill-sub {
-            color: var(--gold);
+            color: var(--lux-gold);
         }
         .pill-title {
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 400;
             margin-bottom: 4px;
         }
         .pill-sub {
             font-size: 11px;
-            color: #64748B;
-            font-family: 'IBM Plex Mono', monospace;
+            color: #666;
         }
-
         .package-card {
-            border: 1.5px solid var(--border);
-            border-radius: 10px;
+            border: 1px solid #eaeaea;
             padding: 20px;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             background: #fff;
             margin-bottom: 12px;
         }
         .package-card:hover {
-            border-color: var(--gold);
+            border-color: var(--lux-gold);
         }
         .package-card.active {
-            border-color: var(--gold);
-            background: #FAF7F0;
-            box-shadow: 0 4px 16px rgba(197,154,63,0.12);
+            border-color: var(--lux-gold);
+            background: var(--lux-gray);
         }
         .package-header {
             display: flex;
@@ -102,62 +95,55 @@ require_once __DIR__ . '/includes/header.php';
         }
         .package-name {
             font-size: 16px;
-            font-weight: 700;
-            color: #0F141C;
+            font-weight: 400;
+            color: var(--lux-dark);
         }
         .package-price {
-            font-family: 'IBM Plex Mono', monospace;
             font-size: 15px;
-            font-weight: 600;
-            color: var(--gold);
+            color: var(--lux-gold);
         }
         .package-desc {
             font-size: 13px;
-            color: #64748B;
+            color: #666;
             line-height: 1.5;
         }
-
         .addon-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 14px 16px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
+            border: 1px solid #eaeaea;
             margin-bottom: 10px;
             background: #fff;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
         .addon-item:hover {
-            border-color: var(--gold);
+            border-color: var(--lux-gold);
         }
         .addon-item.active {
-            border-color: var(--gold);
-            background: #FAF7F0;
+            border-color: var(--lux-gold);
+            background: var(--lux-gray);
         }
         .addon-label {
             display: flex;
             align-items: center;
             gap: 12px;
             font-size: 14px;
-            font-weight: 500;
+            color: var(--lux-dark);
         }
-
         .quote-summary-card {
-            background: #0F141C;
+            background: var(--lux-dark);
             color: #fff;
-            border-radius: 12px;
-            border: 1px solid #242D3D;
-            padding: 32px;
+            padding: 40px;
             position: sticky;
             top: 100px;
         }
         .price-display-big {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: var(--font-display);
             font-size: 38px;
-            font-weight: 700;
-            color: var(--gold);
+            font-weight: 300;
+            color: var(--lux-gold);
             margin: 12px 0 6px;
         }
         .summary-row {
@@ -165,93 +151,53 @@ require_once __DIR__ . '/includes/header.php';
             justify-content: space-between;
             font-size: 13px;
             padding: 10px 0;
-            border-bottom: 1px solid #242D3D;
-            color: #CBD5E1;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
         }
         .summary-row.total {
             font-size: 16px;
-            font-weight: 700;
             color: #fff;
-            border-top: 2px solid var(--gold);
+            border-top: 1px solid var(--lux-gold);
             border-bottom: none;
             padding-top: 16px;
             margin-top: 8px;
         }
         @media(max-width: 992px) {
-            .calculator-layout {
-                grid-template-columns: 1fr;
-            }
-            .quote-summary-card {
-                position: static;
-            }
+            .calculator-layout { grid-template-columns: 1fr; }
+            .quote-summary-card { position: static; }
         }
     </style>
 
     <!-- PAGE HERO BANNER -->
-    <header class="page-banner banner-quote">
-        <div class="container">
-            <div class="page-banner-layout">
-                <div>
-                    <div class="breadcrumbs">
-                        <a href="index.php"><i data-lucide="home" style="width:13px;height:13px;"></i> Home</a> <span>/</span> <span>Instant Quote Calculator</span>
-                    </div>
-                    <div class="section-tag dark">Transparent Turnkey Cost Estimator</div>
-                    <h1>Instant Turnkey <span class="gold-gradient">Cost Calculator.</span></h1>
-                    <p>
-                        Get a real-time, transparent cost breakdown for your residential or commercial space tailored to your carpet area, material specifications, and bespoke joinery options.
-                    </p>
-                    <div class="banner-feature-pills">
-                        <div class="banner-pill"><i data-lucide="calculator"></i> Real-Time Price Engine</div>
-                        <div class="banner-pill"><i data-lucide="lock"></i> 100% Price Lock Guarantee</div>
-                        <div class="banner-pill"><i data-lucide="file-text"></i> Instant BOQ Blueprint</div>
-                    </div>
-                    <div class="banner-cta-group">
-                        <a href="#calculatorSection" class="btn btn-gold">
-                            <i data-lucide="sliders" style="width:15px;height:15px;"></i> Configure Your Space
-                        </a>
-                        <a href="contact.php" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.25);">
-                            <i data-lucide="phone-call" style="width:15px;height:15px;"></i> Speak with Architect
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="banner-stat-glass">
-                        <div class="banner-stat-glass-title">
-                            <i data-lucide="shield-check" style="width:14px;height:14px;"></i> Estimate Guarantees
-                        </div>
-                        <div class="banner-stat-grid">
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">100<span>%</span></div>
-                                <div class="banner-stat-label">Transparent BOQ</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">₹0</div>
-                                <div class="banner-stat-label">Hidden Escalations</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">Live</div>
-                                <div class="banner-stat-label">Dynamic Calculation</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">PDF</div>
-                                <div class="banner-stat-label">Instant Summary</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <header class="lux-hero lux-hero-sm">
+        <img src="C:\Users\ranje\.gemini\antigravity\brain\01efbde6-c06f-437f-bf0e-0596396852ca\projects_hero_1790771589193.jpg" class="lux-hero-img" alt="Quote Hero">
+        <div class="lux-hero-overlay"></div>
+        <div class="lux-hero-content">
+            <div class="lux-breadcrumb">
+                <a href="index.php"><i data-lucide="home" style="width:13px;height:13px;"></i> Home</a> <span>/</span> <span>Instant Quote Calculator</span>
+            </div>
+            <h1 class="lux-hero-title">Instant Turnkey Cost Calculator</h1>
+            <p class="lux-hero-subtitle">
+                Get a real-time, transparent cost breakdown for your residential or commercial space tailored to your carpet area, material specifications, and bespoke joinery options.
+            </p>
+            <div class="lux-btn-group">
+                <a href="#calculatorSection" class="lux-btn lux-btn-primary">
+                    <i data-lucide="sliders" style="width:15px;height:15px;"></i> Configure Your Space
+                </a>
+                <a href="contact.php" class="lux-btn lux-btn-outline">
+                    <i data-lucide="phone-call" style="width:15px;height:15px;"></i> Speak with Architect
+                </a>
             </div>
         </div>
     </header>
 
     <!-- CALCULATOR BODY -->
-    <section class="section" id="calculatorSection" style="background:var(--bg);">
+    <section id="calculatorSection" class="lux-category-section" style="background:var(--lux-gray);">
         <div class="container">
             <div class="calculator-layout">
                 
                 <!-- CONTROLS COLUMN -->
                 <div>
-                    
                     <!-- STEP 1: PROPERTY TYPE -->
                     <div class="calc-card">
                         <div class="calc-section-title">
@@ -291,14 +237,14 @@ require_once __DIR__ . '/includes/header.php';
                             <span>02</span> Carpet Area (Square Feet)
                         </div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-                            <label style="font-size:14px; color:#64748B;">Adjust or type your exact carpet area:</label>
+                            <label style="font-size:14px; color:#666;">Adjust or type your exact carpet area:</label>
                             <div style="display:flex; align-items:center; gap:6px;">
-                                <input type="number" id="areaInput" value="1550" min="300" max="20000" step="50" class="form-control" style="width:110px; font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:16px; padding:6px 10px; text-align:right;" oninput="onAreaInputChange(this.value)">
-                                <span style="font-size:13px; font-weight:600; color:#475569;">sq.ft</span>
+                                <input type="number" id="areaInput" value="1550" min="300" max="20000" step="50" style="width:110px; font-size:16px; padding:6px 10px; text-align:right; border: 1px solid #ccc;" oninput="onAreaInputChange(this.value)">
+                                <span style="font-size:13px; color:#666;">sq.ft</span>
                             </div>
                         </div>
-                        <input type="range" id="areaSlider" min="400" max="6000" step="50" value="1550" style="width:100%; accent-color:var(--gold); cursor:pointer;" oninput="onAreaSliderChange(this.value)">
-                        <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; font-family:'IBM Plex Mono',monospace; margin-top:6px;">
+                        <input type="range" id="areaSlider" min="400" max="6000" step="50" value="1550" style="width:100%; accent-color:var(--lux-gold); cursor:pointer;" oninput="onAreaSliderChange(this.value)">
+                        <div style="display:flex; justify-content:space-between; font-size:11px; color:#999; margin-top:6px;">
                             <span>400 sq.ft</span>
                             <span>2,500 sq.ft</span>
                             <span>6,000+ sq.ft</span>
@@ -353,7 +299,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" checked onclick="event.stopPropagation()">
                                 <span>Gourmet Modular Kitchen (Quartz + Soft Close Tandem)</span>
                             </div>
-                            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--gold);">+₹2,20,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+₹2,20,000</div>
                         </div>
 
                         <div class="addon-item active" onclick="toggleAddon('wardrobes', 160000, 'Smoked Glass Walk-in Wardrobes (2 Units)', this)">
@@ -361,7 +307,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" checked onclick="event.stopPropagation()">
                                 <span>Smoked Glass Walk-in Wardrobes (2 Master Units)</span>
                             </div>
-                            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--gold);">+₹1,60,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+₹1,60,000</div>
                         </div>
 
                         <div class="addon-item" onclick="toggleAddon('facade', 180000, 'Exterior Architectural Facade Cladding', this)">
@@ -369,7 +315,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" onclick="event.stopPropagation()">
                                 <span>Exterior Architectural Facade & Front Elevation Cladding</span>
                             </div>
-                            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--gold);">+₹1,80,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+₹1,80,000</div>
                         </div>
 
                         <div class="addon-item" onclick="toggleAddon('automation', 85000, 'Smart Touch Automation & Ambient Lighting', this)">
@@ -377,7 +323,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" onclick="event.stopPropagation()">
                                 <span>Smart Home Touch Automation & App-Controlled Lighting</span>
                             </div>
-                            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--gold);">+₹85,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+₹85,000</div>
                         </div>
 
                         <div class="addon-item" onclick="toggleAddon('civil', 140000, 'Civil Remodeling & Wall Relocation', this)">
@@ -385,7 +331,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <input type="checkbox" onclick="event.stopPropagation()">
                                 <span>Civil Remodeling, Tile Replacement & Wall Relocation</span>
                             </div>
-                            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--gold);">+₹1,40,000</div>
+                            <div style="font-size:13px; color:var(--lux-gold);">+₹1,40,000</div>
                         </div>
                     </div>
 
@@ -394,10 +340,10 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- ESTIMATE BREAKDOWN COLUMN -->
                 <div>
                     <div class="quote-summary-card">
-                        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em;">Estimated Budget Summary</span>
+                        <span style="font-size:11px; color:var(--lux-gold); text-transform:uppercase; letter-spacing:0.1em;">Estimated Budget Summary</span>
                         
                         <div class="price-display-big" id="grandTotalDisplay">₹32,47,500</div>
-                        <p style="font-size:12px; color:#94A3B8; margin-bottom:20px;">* Includes design, 3D visualization, materials, labor & turnkey execution.</p>
+                        <p style="font-size:12px; color:#aaa; margin-bottom:20px;">* Includes design, 3D visualization, materials, labor & turnkey execution.</p>
 
                         <div style="margin-bottom:24px;">
                             <div class="summary-row">
@@ -422,32 +368,32 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                             <div class="summary-row total">
                                 <span>Grand Turnkey Total:</span>
-                                <span id="sumTotal" style="color:var(--gold);">₹32,47,500</span>
+                                <span id="sumTotal" style="color:var(--lux-gold);">₹32,47,500</span>
                             </div>
                         </div>
 
                         <!-- BOOKING / BLUEPRINT FORM -->
-                        <div style="background:#171E28; border:1px solid #2A3649; border-radius:8px; padding:20px; margin-top:20px;">
-                            <h4 style="font-size:15px; color:#fff; margin-bottom:12px; font-weight:600;">Lock In This Quotation</h4>
-                            <p style="font-size:12px; color:#94A3B8; margin-bottom:16px;">Receive a full itemized Bill of Quantities (BOQ) and 3D concept sample directly via WhatsApp/Email.</p>
+                        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:20px; margin-top:20px;">
+                            <h4 style="font-size:15px; color:#fff; margin-bottom:12px; font-weight:400;">Lock In This Quotation</h4>
+                            <p style="font-size:12px; color:#aaa; margin-bottom:16px;">Receive a full itemized Bill of Quantities (BOQ) and 3D concept sample directly via WhatsApp/Email.</p>
                             
                             <form id="quoteLockForm" onsubmit="handleQuoteCalculationSubmit(event)">
-                                <div class="form-group" style="margin-bottom:12px;">
-                                    <input type="text" id="q_name" name="name" class="form-control" placeholder="Your Full Name" required style="background:#0F141C; color:#fff; border-color:#2A3649; font-size:13px;">
+                                <div class="lux-form-group">
+                                    <input type="text" id="q_name" name="name" class="lux-input" placeholder="Your Full Name" required style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.2);">
                                 </div>
-                                <div class="form-group" style="margin-bottom:12px;">
-                                    <input type="tel" id="q_phone" name="phone" class="form-control" placeholder="Mobile / WhatsApp Number" required style="background:#0F141C; color:#fff; border-color:#2A3649; font-size:13px;">
+                                <div class="lux-form-group">
+                                    <input type="tel" id="q_phone" name="phone" class="lux-input" placeholder="Mobile / WhatsApp Number" required style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.2);">
                                 </div>
-                                <div class="form-group" style="margin-bottom:16px;">
-                                    <input type="email" id="q_email" name="email" class="form-control" placeholder="Email Address (Optional)" style="background:#0F141C; color:#fff; border-color:#2A3649; font-size:13px;">
+                                <div class="lux-form-group">
+                                    <input type="email" id="q_email" name="email" class="lux-input" placeholder="Email Address (Optional)" style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.2);">
                                 </div>
-                                <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center; padding:12px; font-size:14px;">
-                                    Get Official BOQ Estimate <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+                                <button type="submit" class="lux-btn lux-btn-primary" style="width:100%; justify-content:center; background:var(--lux-gold); color:#fff; border:none;">
+                                    Get Official BOQ Estimate
                                 </button>
                             </form>
                         </div>
 
-                        <div style="margin-top:20px; text-align:center; font-size:12px; color:#64748B;">
+                        <div style="margin-top:20px; text-align:center; font-size:12px; color:#aaa;">
                             🔒 100% Price Lock Guarantee. No hidden or surprise charges.
                         </div>
                     </div>

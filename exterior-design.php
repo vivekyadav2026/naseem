@@ -1,144 +1,127 @@
 <?php
-$pageTitle = 'Exterior Design & Elevation — 11 Sub-Disciplines | Muskan Interiors';
-$pageDesc = 'Modern front elevations, facade cladding, WPC wooden louvers, stone veneer, boundary walls, and landscape lighting in Patna.';
+$pageTitle = 'Exterior Design & Elevation | Muskan Interiors';
+$pageDesc = 'Premium exterior elevation and facade design in Patna. We specialize in modern villa facades, commercial elevations, and structural aesthetic modifications.';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-    <!-- PAGE HERO BANNER -->
-    <header class="page-banner banner-exterior">
-        <div class="container">
-            <div class="page-banner-layout">
-                <div>
-                    <div class="breadcrumbs">
-                        <a href="index.php"><i data-lucide="home" style="width:13px;height:13px;"></i> Home</a> <span>/</span> <a href="services.php">Services</a> <span>/</span> <span>Exterior Design</span>
-                    </div>
-                    <div class="section-tag dark">11 Specialized Sub-Disciplines</div>
-                    <h1>Architectural Exterior <span class="gold-gradient">Elevations & Facades.</span></h1>
-                    <p>
-                        We design and build iconic residential villa facades, weather-proof HPL/WPC cladding, stone veneer, boundary architecture, and landscape illumination engineered to withstand all climate conditions.
-                    </p>
-                    <div class="banner-feature-pills">
-                        <div class="banner-pill"><i data-lucide="sun"></i> Weather-Proof HPL/WPC</div>
-                        <div class="banner-pill"><i data-lucide="layers"></i> Natural Stone Cladding</div>
-                        <div class="banner-pill"><i data-lucide="sparkles"></i> 3D Lighting Simulations</div>
-                    </div>
-                    <div class="banner-cta-group">
-                        <a href="contact.php" class="btn btn-gold">
-                            <i data-lucide="phone" style="width:15px;height:15px;"></i> Contact Studio
-                        </a>
-                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
-                            <i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp Facade Team
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="banner-stat-glass">
-                        <div class="banner-stat-glass-title">
-                            <i data-lucide="building" style="width:14px;height:14px;"></i> Facade Specifications
-                        </div>
-                        <div class="banner-stat-grid">
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">11</div>
-                                <div class="banner-stat-label">Sub-Disciplines</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">100<span>%</span></div>
-                                <div class="banner-stat-label">Weather Resistant</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">HPL<span>/WPC</span></div>
-                                <div class="banner-stat-label">Exterior Cladding</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">Day<span>/Night</span></div>
-                                <div class="banner-stat-label">3D Light Simulation</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- 1. CINEMATIC HERO -->
+    <header class="lux-hero lux-hero-sm">
+        <img src="images/muskan/exterior_facade.jpg" alt="Exterior Facade Design" class="lux-hero-img">
+        <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.95) 0%, rgba(9,11,14,0.3) 100%);"></div>
+        <div class="lux-hero-content">
+            <div class="lux-breadcrumb">
+                <a href="index.php">Home</a> / <a href="services.php">Services</a> / Exterior Design
+            </div>
+            <h1 class="lux-hero-title">Architectural Elevations</h1>
+            <p class="lux-hero-subtitle" style="max-width: 600px;">
+                Striking modern facades designed for permanence. We transform ordinary structures into architectural landmarks.
+            </p>
+            <div class="lux-btn-group">
+                <a href="contact.php" class="lux-btn lux-btn-primary">Get Free Consultation</a>
             </div>
         </div>
     </header>
 
-    <!-- 11 SUB-SERVICES GRID -->
-    <section class="section" style="background:var(--bg);">
-        <div class="container">
-            <div class="section-header text-center" style="max-width:760px; margin:0 auto 50px;">
-                <div class="section-tag">Exterior Scope</div>
-                <h2 class="section-title">All 11 Exterior Design Sub-Services</h2>
-                <p class="section-desc">Create striking architectural street presence with weather-engineered luxury materials.</p>
-            </div>
+    <!-- 2. SERVICE INTRO (SPLIT REVERSE) -->
+    <section class="lux-split reverse">
+        <div class="lux-split-img">
+            <img src="images/muskan/modern_elevation.jpg" alt="Modern Elevation">
+        </div>
+        <div class="lux-split-content">
+            <div class="lux-split-label">Structural Aesthetics</div>
+            <h2 class="lux-split-title">Facades That Make a Statement</h2>
+            <p class="lux-split-desc">
+                Your building's exterior is its first impression. We specialize in modern villa facades, commercial elevations, and structural aesthetic modifications that endure the elements while looking spectacular.
+            </p>
+            <p class="lux-split-desc">
+                Using weather-resistant materials like HPL (High-Pressure Laminates), ACP (Aluminium Composite Panels), CNC-cut screens, and natural stone cladding, we engineer exteriors that are as durable as they are beautiful.
+            </p>
+        </div>
+    </section>
 
-            <div class="sub-services-grid">
-                <div class="sub-service-card">
-                    <span class="sub-num">01</span>
-                    <h4>3D Front Elevation</h4>
-                    <p>Photorealistic 3D CAD villa elevations with day and night lighting simulations.</p>
+    <!-- 3. WHAT'S INCLUDED (LARGE IMAGE OVERLAY) -->
+    <section style="position:relative; padding:120px 0; background:var(--lux-dark); color:#fff; overflow:hidden;">
+        <img src="images/muskan/hero_villa.jpg" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.3; filter:grayscale(100%);" alt="Villa Background">
+        <div class="container" style="position:relative; z-index:2; max-width:1400px; margin:0 auto; padding:0 20px;">
+            <div class="lux-split-label" style="color:#fff;">Exterior Services</div>
+            <h2 class="lux-split-title" style="color:#fff; margin-bottom:60px;">Our Capabilities</h2>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px;">
+                <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); padding:40px; border:1px solid rgba(255,255,255,0.1);">
+                    <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:15px; color:var(--lux-gold);">Villa Elevations</h4>
+                    <p style="color:#ddd; line-height:1.6;">Bespoke residential facades featuring modern geometric styling, wooden HPL accents, and integrated exterior lighting.</p>
                 </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">02</span>
-                    <h4>HPL & WPC Cladding</h4>
-                    <p>Exterior High-Pressure Laminate and Wood Plastic Composite louvers resistant to UV and rain.</p>
+                <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); padding:40px; border:1px solid rgba(255,255,255,0.1);">
+                    <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:15px; color:var(--lux-gold);">Commercial Facades</h4>
+                    <p style="color:#ddd; line-height:1.6;">High-performance structural glazing, ACP cladding, and large-format branding elements for retail and office spaces.</p>
                 </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">03</span>
-                    <h4>Natural Stone Cladding</h4>
-                    <p>Travertine, slate, sandstone, and imported exterior marble wall installations.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">04</span>
-                    <h4>Glass Facade & Glazing</h4>
-                    <p>Structural toughened glass, curtain wall glazing, and double-glazed soundproof windows.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">05</span>
-                    <h4>Boundary Wall & Main Gate</h4>
-                    <p>Designer RCC boundary walls with laser-cut CNC metal sheets and automated sliding gates.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">06</span>
-                    <h4>Exterior Facade Lighting</h4>
-                    <p>IP67 architectural wall washers, warm upward facade floodlights, and step illumination.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">07</span>
-                    <h4>Terrace & Pergola Design</h4>
-                    <p>MS/Aluminium pergolas, polycarbonate weather canopies, open-air terrace bar lounges.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">08</span>
-                    <h4>Landscape & Garden</h4>
-                    <p>Lawn landscaping, outdoor water fountains, stone pathways, and ambient garden lighting.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">09</span>
-                    <h4>Weather-Proof Textures</h4>
-                    <p>Asian Paints Apex Ultima exterior emulsion, silicone waterproofing, and anti-fungal coats.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">10</span>
-                    <h4>CNC Exterior Screens</h4>
-                    <p>Rust-proof powder-coated metal jali screens for sun control, privacy, and architectural aesthetics.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">11</span>
-                    <h4>Balcony Railings</h4>
-                    <p>Frameless toughened glass railings with stainless steel 304/316 profile base shoes.</p>
+                <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); padding:40px; border:1px solid rgba(255,255,255,0.1);">
+                    <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:15px; color:var(--lux-gold);">Exterior Lighting</h4>
+                    <p style="color:#ddd; line-height:1.6;">Architectural floodlighting, profile LEDs, and automated facade illumination to bring the structure to life at night.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section style="padding:80px 0; background:#0F141C; color:#fff; text-align:center;">
-        <div class="container">
-            <h2 class="section-title" style="color:#fff;">Upgrade Your Building's Facade</h2>
-            <p class="section-desc" style="color:#94A3B8; margin-bottom:28px;">Consult with our elevation architects for a custom 3D facade makeover.</p>
-            <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-                <a href="contact.php" class="btn btn-gold">Book Elevation Consultation</a>
-                <a href="projects.php?category=Exterior Design" class="btn btn-outline" style="color:#fff; border-color:#334155;">View Elevation Projects</a>
+    <!-- 4. MATERIAL SHOWCASE -->
+    <section class="lux-split">
+        <div class="lux-split-content">
+            <div class="lux-split-label">Material Engineering</div>
+            <h2 class="lux-split-title">Built for the Elements</h2>
+            <div style="display:flex; flex-direction:column; gap:20px;">
+                <div style="display:flex; gap:15px; align-items:flex-start;">
+                    <i data-lucide="check-circle" style="color:var(--lux-gold); flex-shrink:0; margin-top:3px;"></i>
+                    <div>
+                        <h4 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:5px;">HPL & WPC Cladding</h4>
+                        <p style="color:#666; font-size:14px;">Weather-proof wooden aesthetics that never rot or fade.</p>
+                    </div>
+                </div>
+                <div style="display:flex; gap:15px; align-items:flex-start;">
+                    <i data-lucide="check-circle" style="color:var(--lux-gold); flex-shrink:0; margin-top:3px;"></i>
+                    <div>
+                        <h4 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:5px;">Natural Stone Cladding</h4>
+                        <p style="color:#666; font-size:14px;">Granite, sandstone, and slate for premium, monolithic textures.</p>
+                    </div>
+                </div>
+                <div style="display:flex; gap:15px; align-items:flex-start;">
+                    <i data-lucide="check-circle" style="color:var(--lux-gold); flex-shrink:0; margin-top:3px;"></i>
+                    <div>
+                        <h4 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:5px;">Toughened Glass Balconies</h4>
+                        <p style="color:#666; font-size:14px;">Frameless glass railings with SS 304 architectural hardware.</p>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="lux-split-img">
+            <img src="images/muskan/exterior_facade.jpg" alt="Material Excellence">
+        </div>
+    </section>
+
+    <!-- 5. FAQ ACCORDION -->
+    <section style="padding:100px 0; background:var(--lux-gray);">
+        <div class="container" style="max-width:800px; margin:0 auto; padding:0 20px;">
+            <div class="lux-split-label" style="text-align:center;">Common Questions</div>
+            <h2 class="lux-split-title" style="text-align:center; margin-bottom:60px;">Exterior FAQ</h2>
+            
+            <div style="margin-bottom:20px; background:#fff; padding:30px; border-radius:4px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
+                <h4 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:10px; color:var(--lux-dark);">Can you modify an existing old building's facade?</h4>
+                <p style="color:#666; line-height:1.6;">Yes, we specialize in structural retrofitting and elevation redesign. We can wrap an old structure in modern framing and cladding to completely transform its appearance without demolishing the core building.</p>
+            </div>
+            <div style="margin-bottom:20px; background:#fff; padding:30px; border-radius:4px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
+                <h4 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:10px; color:var(--lux-dark);">Are the exterior materials waterproof?</h4>
+                <p style="color:#666; line-height:1.6;">Absolutely. All materials we specify for elevations, such as HPL (High-Pressure Laminate) and exterior-grade paints, are fully weather-resistant, UV-protected, and designed for heavy monsoons.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. LEAD GENERATION CTA -->
+    <section class="lux-promo" style="height:50vh; min-height:400px;">
+        <img src="images/muskan/modern_elevation.jpg" alt="Exterior Space" class="lux-promo-img">
+        <div class="lux-promo-overlay" style="background:rgba(9,11,14,0.7);"></div>
+        <div class="lux-promo-content">
+            <h2 class="lux-promo-title" style="font-size:clamp(2rem, 4vw, 3.5rem);">Redefine Your Architecture</h2>
+            <p style="font-size:1.2rem; margin-bottom:40px; color:rgba(255,255,255,0.8);">Talk to our design team today and start your journey.</p>
+            <a href="contact.php" class="lux-btn lux-btn-primary">Book a Free Consultation</a>
         </div>
     </section>
 

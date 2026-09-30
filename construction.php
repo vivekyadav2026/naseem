@@ -1,156 +1,131 @@
 <?php
-$pageTitle = 'Civil Construction Services — 13 Sub-Disciplines | Muskan Interiors';
-$pageDesc = 'RCC foundation, structural framing, MEP conduits, waterproofing, and structural remodeling in Patna.';
+$pageTitle = 'Civil Construction | Muskan Interiors';
+$pageDesc = 'Premium civil construction and execution in Patna. From foundation to finish, we build structures with uncompromising engineering standards.';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-    <!-- PAGE HERO BANNER -->
-    <header class="page-banner banner-construction">
-        <div class="container">
-            <div class="page-banner-layout">
-                <div>
-                    <div class="breadcrumbs">
-                        <a href="index.php"><i data-lucide="home" style="width:13px;height:13px;"></i> Home</a> <span>/</span> <a href="services.php">Services</a> <span>/</span> <span>Civil Construction</span>
-                    </div>
-                    <div class="section-tag dark">13 Structural Sub-Disciplines</div>
-                    <h1>Civil Engineering & <span class="gold-gradient">Structural Construction.</span></h1>
-                    <p>
-                        From raw earth excavation and RCC foundations to electrical conduit lines, waterproofing, and structural remodeling — our certified civil engineers build spaces that last generations.
-                    </p>
-                    <div class="banner-feature-pills">
-                        <div class="banner-pill"><i data-lucide="shield-check"></i> Fe550 TMT Steel</div>
-                        <div class="banner-pill"><i data-lucide="droplets"></i> Chemical Waterproofing</div>
-                        <div class="banner-pill"><i data-lucide="hard-hat"></i> Senior Engineer Supervision</div>
-                    </div>
-                    <div class="banner-cta-group">
-                        <a href="contact.php" class="btn btn-gold">
-                            <i data-lucide="phone" style="width:15px;height:15px;"></i> Contact Studio
-                        </a>
-                        <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:rgba(37,211,102,0.5); background:rgba(37,211,102,0.08);">
-                            <i data-lucide="message-circle" style="width:15px;height:15px;"></i> WhatsApp Civil Team
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="banner-stat-glass">
-                        <div class="banner-stat-glass-title">
-                            <i data-lucide="hard-hat" style="width:14px;height:14px;"></i> Engineering Standards
-                        </div>
-                        <div class="banner-stat-grid">
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">13</div>
-                                <div class="banner-stat-label">Sub-Disciplines</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">Fe550</div>
-                                <div class="banner-stat-label">TMT Grade Steel</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">M25</div>
-                                <div class="banner-stat-label">Concrete Mix Design</div>
-                            </div>
-                            <div class="banner-stat-item">
-                                <div class="banner-stat-num">100<span>%</span></div>
-                                <div class="banner-stat-label">Seepage Proof</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- 1. CINEMATIC HERO -->
+    <header class="lux-hero lux-hero-sm">
+        <img src="images/muskan/construction_site.jpg" alt="Civil Construction Site" class="lux-hero-img">
+        <div class="lux-hero-overlay" style="background: linear-gradient(to top, rgba(9,11,14,0.95) 0%, rgba(9,11,14,0.4) 100%);"></div>
+        <div class="lux-hero-content">
+            <div class="lux-breadcrumb">
+                <a href="index.php">Home</a> / <a href="services.php">Services</a> / Civil Construction
+            </div>
+            <h1 class="lux-hero-title">Civil Engineering & Build</h1>
+            <p class="lux-hero-subtitle" style="max-width: 600px;">
+                From raw foundations to finished architecture. We build structures with uncompromising engineering standards and rigorous supervision.
+            </p>
+            <div class="lux-btn-group">
+                <a href="contact.php" class="lux-btn lux-btn-primary">Get Free Consultation</a>
             </div>
         </div>
     </header>
 
-    <!-- 13 SUB-SERVICES GRID -->
-    <section class="section" style="background:var(--bg);">
-        <div class="container">
-            <div class="section-header text-center" style="max-width:760px; margin:0 auto 50px;">
-                <div class="section-tag">Civil Engineering Scope</div>
-                <h2 class="section-title">All 13 Civil Construction Sub-Services</h2>
-                <p class="section-desc">Institutional-grade structural integrity executed with precision steel and cement standards.</p>
+    <!-- 2. SERVICE INTRO (BEFORE & AFTER VIBE) -->
+    <section class="lux-split">
+        <div class="lux-split-img">
+            <div style="position:absolute; inset:0; display:flex;">
+                <img src="images/muskan/before_raw.jpg" style="width:50%; height:100%; object-fit:cover; filter:grayscale(100%);" alt="Raw Site">
+                <img src="images/muskan/real_execution.jpg" style="width:50%; height:100%; object-fit:cover;" alt="Execution">
             </div>
+        </div>
+        <div class="lux-split-content">
+            <div class="lux-split-label">Ground-Up Execution</div>
+            <h2 class="lux-split-title">Flawless Structural Integrity</h2>
+            <p class="lux-split-desc">
+                Great interiors require a flawless canvas. Our civil construction division handles structural modifications, brickwork, plastering, waterproofing, and complete ground-up building execution.
+            </p>
+            <p class="lux-split-desc">
+                We bridge the gap between design and reality by ensuring that plumbing, electrical conduits, and wall alignments are executed with millimeter precision, eliminating the errors common with unorganized contractors.
+            </p>
+        </div>
+    </section>
 
-            <div class="sub-services-grid">
-                <div class="sub-service-card">
-                    <span class="sub-num">01</span>
-                    <h4>RCC Foundation & Footing</h4>
-                    <p>Soil bearing capacity testing, deep pile foundations, and reinforced concrete footings.</p>
+    <!-- 3. WHAT'S INCLUDED (DARK GRID) -->
+    <section style="padding:120px 0; background:var(--lux-dark); color:#fff;">
+        <div class="container" style="max-width:1400px; margin:0 auto; padding:0 20px;">
+            <div class="lux-split-label" style="color:var(--lux-gold);">Execution Services</div>
+            <h2 class="lux-split-title" style="color:#fff; margin-bottom:80px;">Scope of Civil Work</h2>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:40px;">
+                
+                <div style="border-bottom:1px solid #333; padding-bottom:30px;">
+                    <div style="font-family:var(--font-display); font-size:2rem; color:var(--lux-gold); margin-bottom:15px;">01</div>
+                    <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:15px; color:#fff;">Structural Modifications</h4>
+                    <p style="color:#999; line-height:1.6; font-size:14px;">Safe wall demolition, space expansion, and load-bearing reinforcement for open-plan layouts.</p>
                 </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">02</span>
-                    <h4>Structural Column & Beam</h4>
-                    <p>Fe550 TMT reinforced concrete framing, heavy slab casting, and lintel beams.</p>
+                
+                <div style="border-bottom:1px solid #333; padding-bottom:30px;">
+                    <div style="font-family:var(--font-display); font-size:2rem; color:var(--lux-gold); margin-bottom:15px;">02</div>
+                    <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:15px; color:#fff;">MEP Engineering</h4>
+                    <p style="color:#999; line-height:1.6; font-size:14px;">Advanced MEP (Mechanical, Electrical, Plumbing) planning, concealed wiring, and CPVC/UPVC piping.</p>
                 </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">03</span>
-                    <h4>Brickwork & Masonry</h4>
-                    <p>Red clay brickwork, AAC lightweight block masonry, and structural partition walls.</p>
+                
+                <div style="border-bottom:1px solid #333; padding-bottom:30px;">
+                    <div style="font-family:var(--font-display); font-size:2rem; color:var(--lux-gold); margin-bottom:15px;">03</div>
+                    <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:15px; color:#fff;">Waterproofing</h4>
+                    <p style="color:#999; line-height:1.6; font-size:14px;">Multi-layer chemical waterproofing for bathrooms, terraces, and external walls to prevent seepage.</p>
                 </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">04</span>
-                    <h4>Plastering & Leveling</h4>
-                    <p>Double-coat sand-faced external plaster, smooth internal plaster, and laser-guided leveling.</p>
+                
+                <div style="border-bottom:1px solid #333; padding-bottom:30px;">
+                    <div style="font-family:var(--font-display); font-size:2rem; color:var(--lux-gold); margin-bottom:15px;">04</div>
+                    <h4 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:15px; color:#fff;">Flooring & Tiling</h4>
+                    <p style="color:#999; line-height:1.6; font-size:14px;">Laser-leveled installation of Italian marble, vitrified tiles, and wooden flooring.</p>
                 </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">05</span>
-                    <h4>Waterproofing Systems</h4>
-                    <p>Polymer-modified chemical waterproofing for basements, sunken slabs, bathrooms, and terrace roofs.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ENGINEERING PRECISION (IMAGE ASYMMETRIC) -->
+    <section style="padding:120px 0; background:#fff;">
+        <div class="container" style="max-width:1400px; margin:0 auto; padding:0 20px;">
+            <div style="display:grid; grid-template-columns: 1fr 2fr; gap:60px; align-items:center;">
+                <div>
+                    <h2 class="lux-split-title">Engineered <br>To Last</h2>
+                    <p class="lux-split-desc" style="margin-bottom:30px;">
+                        We deploy dedicated site engineers to supervise every pour, mix, and alignment. We use only ISI-marked TMT bars, ultra-tech cement, and branded concealed pipes.
+                    </p>
+                    <ul style="list-style:none; padding:0; margin:0;">
+                        <li style="margin-bottom:15px; display:flex; align-items:center; gap:10px;"><i data-lucide="check" style="color:var(--lux-gold);"></i> Zero-Tolerance Plumb Lines</li>
+                        <li style="margin-bottom:15px; display:flex; align-items:center; gap:10px;"><i data-lucide="check" style="color:var(--lux-gold);"></i> Laser-Guided Leveling</li>
+                        <li style="margin-bottom:15px; display:flex; align-items:center; gap:10px;"><i data-lucide="check" style="color:var(--lux-gold);"></i> Detailed BOQ Documentation</li>
+                        <li style="margin-bottom:15px; display:flex; align-items:center; gap:10px;"><i data-lucide="check" style="color:var(--lux-gold);"></i> Daily Site Photo Logs</li>
+                    </ul>
                 </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">06</span>
-                    <h4>Electrical MEP Conduiting</h4>
-                    <p>Concealed FR PVC conduits, copper wiring distribution boards, Earthing, and MCB panels.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">07</span>
-                    <h4>Plumbing & Drainage</h4>
-                    <p>CPVC hot/cold lines, SWR sewage pipes, concealed wall diverters, and overhead tanks.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">08</span>
-                    <h4>Structural Demolition</h4>
-                    <p>Safe knock-down of non-load bearing walls, lintel insertions, and spatial enlargement.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">09</span>
-                    <h4>Flooring Base Sub-Structure</h4>
-                    <p>PCC base casting, waterproofing underlayment, and screed leveling for marble/tiles.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">10</span>
-                    <h4>Door & Window Chaukhats</h4>
-                    <p>Red Meranti/Sal wood frames, granite window sills, and UPVC frame fixing.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">11</span>
-                    <h4>Staircase Structural RCC</h4>
-                    <p>Dog-legged, cantilevered, and helical architectural concrete staircases.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">12</span>
-                    <h4>Septic Tank & Water Reservoir</h4>
-                    <p>Heavy RCC underground water storage sumps and modern bio-septic tank systems.</p>
-                </div>
-                <div class="sub-service-card">
-                    <span class="sub-num">13</span>
-                    <h4>Complete Building Renovation</h4>
-                    <p>Structural strengthening, retrofitting, plaster peeling repair, and complete civil overhaul.</p>
+                <div style="position:relative; height:500px; border-radius:4px; overflow:hidden;">
+                    <img src="images/muskan/construction_site.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Site Supervision">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section style="padding:80px 0; background:#0F141C; color:#fff; text-align:center;">
-        <div class="container">
-            <h2 class="section-title" style="color:#fff;">Planning a Civil Construction or Renovation?</h2>
-            <p class="section-desc" style="color:#94A3B8; margin-bottom:28px;">Our senior civil structural engineer is ready to inspect your site.</p>
-            <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-                <a href="contact.php" class="btn btn-gold">Book Civil Site Audit</a>
-                <a href="<?= SITE_WHATSAPP_LINK ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#25D366; border-color:#25D366; background:rgba(37,211,102,0.08);">
-                    <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Instant Chat
-                </a>
+    <!-- 5. FAQ ACCORDION -->
+    <section style="padding:100px 0; background:var(--lux-gray);">
+        <div class="container" style="max-width:800px; margin:0 auto; padding:0 20px;">
+            <div class="lux-split-label" style="text-align:center;">Common Questions</div>
+            <h2 class="lux-split-title" style="text-align:center; margin-bottom:60px;">Civil FAQ</h2>
+            
+            <div style="margin-bottom:20px; background:#fff; padding:30px; border-radius:4px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
+                <h4 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:10px; color:var(--lux-dark);">Do you take up standalone civil projects without interiors?</h4>
+                <p style="color:#666; line-height:1.6;">While our expertise shines in Turnkey projects (Civil + Interiors), we do undertake standalone structural civil construction and commercial shell development projects.</p>
             </div>
+            <div style="margin-bottom:20px; background:#fff; padding:30px; border-radius:4px; box-shadow:0 10px 30px rgba(0,0,0,0.02);">
+                <h4 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:10px; color:var(--lux-dark);">How do you handle hidden costs in civil work?</h4>
+                <p style="color:#666; line-height:1.6;">We generate an exhaustive BOQ (Bill of Quantities) after our site audit. Every inch of material and labor is documented and priced transparently to prevent unauthorized escalations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. LEAD GENERATION CTA -->
+    <section class="lux-promo" style="height:50vh; min-height:400px;">
+        <img src="images/muskan/real_execution.jpg" alt="Construction Site" class="lux-promo-img">
+        <div class="lux-promo-overlay" style="background:rgba(9,11,14,0.8);"></div>
+        <div class="lux-promo-content">
+            <h2 class="lux-promo-title" style="font-size:clamp(2rem, 4vw, 3.5rem);">Start Your Build Properly</h2>
+            <p style="font-size:1.2rem; margin-bottom:40px; color:rgba(255,255,255,0.8);">Hire engineered precision for your site.</p>
+            <a href="contact.php" class="lux-btn lux-btn-primary">Book a Free Site Audit</a>
         </div>
     </section>
 

@@ -20,6 +20,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lux-style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>

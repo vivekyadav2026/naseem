@@ -1,0 +1,32 @@
+[
+    {
+        "id": "ENQ-801",
+        "name": "Er. Rajesh Kumar Singh",
+        "phone": "+91 94310 22334",
+        "email": "rajesh.singh@gmail.com",
+        "service": "Complete Turnkey Interior & Build",
+        "property_type": "Independent Villa",
+        "area": "3,200 sq.ft",
+        "budget": "₹45,00,000",
+        "message": "Looking for complete turnkey 3D design and civil execution for newly constructed villa near Saguna More.",
+        "status": "Site Visit Scheduled",
+        "source": "Website Form",
+        "notes": "Site visit scheduled for Saturday 11:30 AM with Chief Architect.",
+        "created_at": "2026-09-29 14:09:11"
+    },
+    {
+        "id": "ENQ-802",
+        "name": "Dr. Priya Ranjan",
+        "phone": "+91 98350 77889",
+        "email": "drpriya.pmch@gmail.com",
+        "service": "Modular Kitchen & Wardrobes",
+        "property_type": "3 BHK Apartment",
+        "area": "1,650 sq.ft",
+        "budget": "₹18,00,000",
+        "message": "Need premium modular kitchen with acrylic finish and smoked glass wardrobes for 2 master bedrooms.",
+        "status": "Quotation Sent",
+        "source": "Quote Calculator",
+        "notes": "BOQ estimate generated and sent via WhatsApp.",
+        "created_at": "2026-09-30 11:09:11"
+    }
+]

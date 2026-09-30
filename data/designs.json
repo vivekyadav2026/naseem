@@ -1,0 +1,38 @@
+[
+    {
+        "id": "DSG-201",
+        "title": "Master Bedroom Smoked Glass Walk-in Wardrobe",
+        "category": "Wooden Work",
+        "tags": "Wardrobe, Smoked Glass, Profile LED, Teak",
+        "image_url": "images\/muskan\/wooden_wardrobe.jpg",
+        "description": "Floor-to-ceiling tinted aluminium glass shutter wardrobe with motion-sensing integrated vertical warm light channels.",
+        "created_at": "2026-09-30 14:09:10"
+    },
+    {
+        "id": "DSG-202",
+        "title": "Ultra-Modern Architectural Facade & Cantilever",
+        "category": "Exterior Design",
+        "tags": "Elevation, 3D Facade, Louvers, Travertine",
+        "image_url": "images\/muskan\/modern_elevation.jpg",
+        "description": "Architectural exterior render showcasing dual-tone travertine stone cladding and CNC cut metal screens.",
+        "created_at": "2026-09-30 14:09:10"
+    },
+    {
+        "id": "DSG-203",
+        "title": "Minimalist Living Room Lounge with Fluted Panels",
+        "category": "Interior Design",
+        "tags": "Living Room, False Ceiling, Track Lights, Marble",
+        "image_url": "images\/muskan\/living_room.jpg",
+        "description": "Spacious open-plan living room with fluted oak panelling, cove illumination and low-profile sofa layout.",
+        "created_at": "2026-09-30 14:09:10"
+    },
+    {
+        "id": "DSG-204",
+        "title": "Island Kitchen with Calacatta Quartz Waterfall",
+        "category": "Interior Design",
+        "tags": "Modular Kitchen, Island, Quartz, Charcoal",
+        "image_url": "images\/muskan\/modular_kitchen.jpg",
+        "description": "Matte charcoal acrylic cabinetry with gold accents and built-in chimney extractor hood.",
+        "created_at": "2026-09-30 14:09:11"
+    }
+]
